@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Cenario
-comment0.text=\r\n\ Objeto\ do\ ambiente.\ O\ proprio\ cenario\ define\ se\ bloqueia\ a\ passagem,\r\n\ o\ tamanho\ da\ area\ de\ colisao\ e\ se\ pode\ ser\ usado\ como\ saida.\r\n\ As\ imagens\ nao\ determinam\ a\ colisao\:\ somente\ a\ base\ do\ objeto\ o\ faz.\r\n
+comment0.text=\n\ Objeto\ do\ ambiente.\ O\ proprio\ cenario\ define\ se\ bloqueia\ a\ passagem,\n\ o\ tamanho\ da\ area\ de\ colisao\ e\ se\ pode\ ser\ usado\ como\ saida.\n\ As\ imagens\ nao\ determinam\ a\ colisao\:\ somente\ a\ base\ do\ objeto\ o\ faz.\n
 comment1.params=nome\ id\ interativo\ imagem
 comment1.target=Cenario(java.lang.String,\ int,\ boolean,\ java.lang.String)
 comment1.text=Cria\ um\ objeto\ de\ cenario\ com\ dimensoes\ padrao.

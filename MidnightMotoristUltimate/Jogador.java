@@ -18,7 +18,6 @@ public class Jogador extends Personagem {
     private int passos;
     private int recargaGranada;
     private int granadas;
-    private int escudo;
     private final GreenfootImage spriteTiro;
     private final GreenfootImage spriteGolpe;
     private final GreenfootImage spriteGranada;
@@ -152,11 +151,11 @@ public class Jogador extends Personagem {
     // resume equipamento, municao, granadas e colete como string
     public String obterEquipamentoTexto() {
         Equipamento item = getEquipamentoSelecionado();
-        if (item == null) return "Desarmado  |  Granadas: " + granadas + "  |  Colete: " + escudo;
+        if (item == null) return "Desarmado  |  Granadas: " + granadas;
         String texto = item.getNome();
         if (item instanceof ArmaFogo) texto += " / municao: " + ((ArmaFogo) item).getMunicao();
         if (item instanceof Armamento) texto += " / usos: " + ((Armamento) item).getResistencia();
-        return texto + "  |  Granadas: " + granadas + "  |  Colete: " + escudo;
+        return texto + "  |  Granadas: " + granadas;
     }
 
     /** O jogador (nao o mundo) possui e administra o inventario. */
@@ -170,15 +169,6 @@ public class Jogador extends Personagem {
                 ((FaseBase) getWorld()).coletouItem(30);
                 ((FaseBase) getWorld()).avisar("Granadas coletadas: " + granadas + ". Lance com "
                                               + cmds.obterTeclaExibicao("LANCAR_GRANADA") + "!");
-                return;
-            }
-            
-            if (item instanceof Colete) {
-                escudo = Math.min(90, escudo + 45);
-                getWorld().removeObject(item);
-                Greenfoot.playSound("hit_som.wav");
-                ((FaseBase) getWorld()).coletouItem(35);
-                ((FaseBase) getWorld()).avisar("Colete equipado: protecao " + escudo);
                 return;
             }
             
@@ -226,8 +216,7 @@ public class Jogador extends Personagem {
     @Override
     public void receberDano(int quantidade) {
         if (invulneravel > 0 || estaMorto()) return;
-        int bloqueado = Math.min(escudo, Math.max(0, quantidade));
-        escudo -= bloqueado;
+        int bloqueado = Math.min(0, quantidade);
         super.receberDano(quantidade - bloqueado);
         invulneravel = 36;
         Greenfoot.playSound("som_dano.wav");

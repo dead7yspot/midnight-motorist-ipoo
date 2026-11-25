@@ -36,7 +36,6 @@ public class Fase01 extends FaseBase {
         
         addObject(new ArmaFogo("Revolver", "Alcance longo", "revolverJogo.png", 80, 395, 16, 22), 550, 478);
         addObject(new Suprimento("Kit medico", 35), 794, 495);
-        addObject(new Colete(), 300, 487);
         addObject(new Dinheiro(70), 270, 525);
         addObject(new Dinheiro(120), 745, 504);
 

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Armamento
-comment0.text=\r\n\ Equipamento\ q\ causa\ dano;\ resistencia\ \=\ quantos\ usos\ ate\ ficar\ inutilizavel\r\n\ \r\n
+comment0.text=\n\ Equipamento\ q\ causa\ dano;\ resistencia\ \=\ quantos\ usos\ ate\ ficar\ inutilizavel\n\ \n
 comment1.params=nome\ descricao\ imagem\ resistencia\ alcance\ danoMaximo
 comment1.target=Armamento(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int)
 comment1.text=Guarda\ o\ alcance,\ o\ dano\ e\ a\ quantidade\ de\ usos\ da\ arma.

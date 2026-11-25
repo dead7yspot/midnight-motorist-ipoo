@@ -40,7 +40,7 @@ public class Fase03 extends FaseBase {
         
         addObject(new TanqueChefe(alvo, 
               new ArmaFogo("Canhao", "Disparo de tanque", "revolverJogo.png",
-                           500, 600, 500, 32, 40, 1)), x, y);
+                           500, 600, 500, 20, 25, 1)), x, y);
                            
         getEstado().adicionarPontos(250);
         adicionarGranadas();

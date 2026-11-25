@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TextoHUD
-comment0.text=\ \r\n\ Classe\ responsavel\ por\ criar\ textos.\ Os\ textos\ s\u00E3o\ criados\ como\ imagem\ para\ melhor\ visualiza\u00E7\u00E3o\r\n\ \r\n
+comment0.text=\ \n\ Classe\ responsavel\ por\ criar\ textos.\ Os\ textos\ s\u00E3o\ criados\ como\ imagem\ para\ melhor\ visualiza\u00E7\u00E3o\n\ \n
 comment1.params=tamanho\ cor
 comment1.target=TextoHUD(int,\ greenfoot.Color)
 comment2.params=texto

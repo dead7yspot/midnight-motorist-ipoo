@@ -4,7 +4,7 @@ import greenfoot.*;
 public class TanqueChefe extends Inimigo {
     /** Prepara a forma blindada, suas animacoes e seu canhao. */
     public TanqueChefe(Jogador jogador, ArmaFogo tanqueArma) {
-        super("Tanque da mafia", 170, 1, jogador, 205, tanqueArma,
+        super("Tanque da mafia", 100, 1, jogador, 205, tanqueArma,
               "novo_tanque_parado.png", "novo_tanque_andar1.png", "novo_tanque_andar2.png",
               "novo_tanque_tiro.png");
         configurarEscalaVisual(100);

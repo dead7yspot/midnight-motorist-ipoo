@@ -6,7 +6,7 @@ public class ChefeFinal extends Inimigo {
 
     /** Prepara o chefao humano com sua shotgun de tres projeteis. */
     public ChefeFinal(Jogador jogador) {
-        super("Chefe da Gangue", 235, 2, jogador, 170,
+        super("Chefe da Gangue", 100, 2, jogador, 170,
               new ArmaFogo("Shotgun do Chefe", "Dispara tres bagos", "revolverJogo.png",
                            300, 380, 300, 16, 24, 3),
               "novo_chefe_parado.png", "novo_chefe_andar1.png", "novo_chefe_andar2.png",

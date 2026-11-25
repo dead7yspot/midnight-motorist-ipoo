@@ -9,7 +9,7 @@ public class InimigoPatrulha extends Inimigo {
 
     /** Configura o trecho patrulhado e o ataque corpo a corpo. */
     public InimigoPatrulha(String nome, Jogador jogador, int esquerda, int direita) {
-        super(nome, 65, 2, jogador, 42,
+        super(nome, 25, 2, jogador, 42,
               new ArmaBranca("Soco", "Ataque curto", "facaJogo.png", 500, 49, 8),
               "novo_vigia_parado.png", "novo_vigia_andar1.png", "novo_vigia_andar2.png",
               "novo_vigia_soco.png");
