@@ -2,7 +2,7 @@ import greenfoot.*;
 
 /** Primeira fase: limpar a rua e encontrar a saida. */
 public class Fase01 extends FaseBase {
-    /** Permite iniciar a primeira fase diretamente pelo Greenfoot. */
+    // permite iniciar a primeira fase diretamente pelo Greenfoot, usado durante o desenvolvimento para facilitar
     public Fase01() {
         this(TelaInicial.criarComandosPadrao(), new EstadoPartida());
     }
@@ -13,14 +13,16 @@ public class Fase01 extends FaseBase {
         prepararCenario(null);
     }
 
-    /** Mantem a assinatura da versao antiga para facilitar uso no Greenfoot. */
+    /** Mantem a assinatura da versao antiga para facilitar uso no Greenfoot. 
     public Fase01(int largura, int altura, int escala, GerenciadorComandos comandos) {
         this(comandos, new EstadoPartida());
     }
-
+    */
+   
     /** Distribui inimigos, itens, obstaculos e a saida pela rua. */
     private void prepararCenario(Jogador anterior) {
         colocarJogador(anterior, 100, 465);
+        
         adicionarObstaculo("Carro abandonado", "noir_carro_abandonado.png", 370, 352, 147, 92, 57, 16, 27);
         adicionarObstaculo("Arvore", "noir_arvore.png", 228, 203, 104, 116, 26, 12, 43);
         adicionarObstaculo("Poste", "noir_poste.png", 610, 263, 40, 118, 10, 11, 50);
@@ -29,6 +31,9 @@ public class Fase01 extends FaseBase {
         adicionarObstaculo("Arvore", "noir_arvore.png", 848, 193, 104, 116, 26, 12, 43);
 
         addObject(new ArmaBranca("Estilete", "Arma branca", "estileteJogo.png", 90, 65, 18), 185, 472);
+        
+        addObject(new ArmaBranca("FACA DEBUG", "Arma branca", "facaJogo.png", 90, 300, 1000), 215, 472);
+        
         addObject(new ArmaFogo("Revolver", "Alcance longo", "revolverJogo.png", 80, 395, 16, 22), 550, 478);
         addObject(new Suprimento("Kit medico", 35), 794, 495);
         addObject(new Colete(), 300, 487);

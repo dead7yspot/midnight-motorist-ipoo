@@ -1,16 +1,11 @@
 #BlueJ class context
 comment0.target=GerenciadorAudio
-comment0.text=Centraliza\ musica\ do\ menu\ e\ das\ fases\ (metodos\ estaticos\ intencionais).
 comment1.params=arquivo
 comment1.target=void\ iniciarMusica(java.lang.String)
-comment1.text=Troca\ a\ musica\ de\ fundo,\ preservando\ a\ preferencia\ de\ pausa.
 comment2.params=
 comment2.target=void\ alternarMusica()
-comment2.text=Pausa\ ou\ retoma\ a\ musica\ atual.
 comment3.params=
 comment3.target=void\ pararMusica()
-comment3.text=Para\ a\ musica\ e\ libera\ o\ arquivo\ sem\ esquecer\ a\ preferencia\ de\ pausa.
 comment4.params=
 comment4.target=boolean\ estaPausada()
-comment4.text=Informa\ se\ a\ musica\ esta\ pausada.
 numComments=5

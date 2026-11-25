@@ -13,8 +13,6 @@ public class Fase02 extends World {
     private int distanciaPolicia = 760;
     private boolean terminou;
     private boolean musicaPressionada;
-    
-    private GreenfootSound sirene;
 
     // Monta a rodovia preservando o protagonista e o placar anteriores
     public Fase02(GerenciadorComandos comandos, EstadoPartida estado, Jogador jogador) {
@@ -22,37 +20,47 @@ public class Fase02 extends World {
         this.comandos = comandos;
         this.estado = estado;
         this.jogador = jogador;
+        
         musicaPressionada = comandoMusicaPressionado();
+        
         GreenfootImage fundo = new GreenfootImage("cidade_viva_fase2.png");
         fundo.setColor(new Color(12, 15, 20, 225));
         fundo.fillRect(0, 0, 1024, 45);
         setBackground(fundo);
+        
         setPaintOrder(CarroJogador.class, CarroPolicia.class, ItemRodovia.class,
                       ObstaculoRodovia.class, PlacaSaidaRodovia.class, FaixaRodovia.class, LuzesCidade.class);
         addObject(new LuzesCidade(2), 512, 286);
+        
+        // cuida das faixas se movendo pra dar sensacao de velocidade
         for (int x = 35; x < 1024; x += 140) {
             addObject(new FaixaRodovia(), x, 220);
             addObject(new FaixaRodovia(), x, 350);
         }
+        
         addObject(new CarroJogador(comandos), 220, 285);
         addObject(new CarroPolicia(), 70, 285);
         atualizarHUD();
-        
-        sirene = new GreenfootSound("sirene.wav");
-        
-        sirene.playLoop();
-        
+  
+        GerenciadorAudio.iniciarMusica("sirene.wav");
         GerenciadorAudio.iniciarMusica("No More (Remastered).mp3");
     }
 
+    // construtor debug para facilitar a fase de desenvolvimento (sem ter que ficar passando a fase 01 toda hora)
+    public Fase02() {
+        this(TelaInicial.criarComandosPadrao(), new EstadoPartida(), new Jogador("teste", 100, 420, TelaInicial.criarComandosPadrao()));
+    }
     
     public void act() {
         
-        if (terminou) 
+        if (terminou) {
+            GerenciadorAudio.pararMusica();
             return;
+        }
         boolean musicaAgora = comandoMusicaPressionado();
         
-        if (musicaAgora && !musicaPressionada) GerenciadorAudio.alternarMusica();
+        if (musicaAgora && !musicaPressionada) 
+            GerenciadorAudio.alternarMusica();
         musicaPressionada = musicaAgora;
         tempo++;
         
@@ -60,19 +68,24 @@ public class Fase02 extends World {
             addObject(new FaixaRodovia(), 1023, 220);
             addObject(new FaixaRodovia(), 1023, 350);
         }
-        if (tempo % 12 == 0) distanciaPolicia--;
+        if (tempo % 12 == 0) 
+            distanciaPolicia--;
+            
         if (tempo % INTERVALO_TRANSITO == 0) {
             int faixa = Greenfoot.getRandomNumber(3);
             addObject(new ObstaculoRodovia(Greenfoot.getRandomNumber(3) != 0),
                       990, 155 + faixa * 130);
         }
+        
         if (tempo % 235 == 0) {
             int y = 155 + Greenfoot.getRandomNumber(3) * 130;
             if ((tempo / 235) % 2 == 0) addObject(new BonusRodovia(), 990, y);
             else addObject(new TurboRodovia(), 990, y);
         }
+        
         if (tempo == DURACAO - 150) addObject(new PlacaSaidaRodovia(), 990, 98);
         atualizarHUD();
+        
         if (distanciaPolicia <= 0) {
             terminou = true;
             Greenfoot.setWorld(new TelaPerseguicaoFim(comandos, estado, jogador));
@@ -87,7 +100,7 @@ public class Fase02 extends World {
     public void colisao() {
         if (terminou) return;
         distanciaPolicia -= 110;
-        Greenfoot.playSound("som_dano.wav");
+        Greenfoot.playSound("veh_col.wav");
     }
 
     // Consulta a distancia atual da viatura
@@ -99,15 +112,14 @@ public class Fase02 extends World {
     public void bonus(int pontos, int distancia) {
         estado.adicionarPontos(pontos);
         distanciaPolicia = Math.min(850, distanciaPolicia + distancia);
-        Greenfoot.playSound("hit_som.wav");
+        Greenfoot.playSound("som_pickup.wav");
     }
 
     //  Mostra pontuacao e progresso desde a criacao da rodovia.
     private void atualizarHUD() {
-        showText("FASE 2 / FUGA     PONTOS: " + estado.getPontos()
+        showText("FASE 2 / FUGA     Pontos: " + estado.getPontos()
                  + "     POLICIA: " + Math.max(0, distanciaPolicia) + " m", 512, 13);
-        showText("PROGRESSO: " + (tempo * 100 / DURACAO)
-                 + "%     $: PONTOS    N2O: AFASTA A POLICIA", 512, 33);
+        showText("PROGRESSO: " + (tempo * 100 / DURACAO) + "%     $: Pontos    N2O: Distancia da policia", 512, 33);
     }
 
     // Verifica as teclas de musica configuradas para a perseguicao

@@ -47,7 +47,11 @@ public class ArmaFogo extends Armamento {
         }
     }
     /** Consulta a municao restante. */
-    public int getMunicao() { return municao; }
+    public int getMunicao() { 
+        return municao; 
+    }
     /** Consulta quantos projeteis saem em cada disparo. */
-    public int getQuantidadeProjetis() { return quantidadeProjetis; }
+    public int getQuantidadeProjetis() { 
+        return quantidadeProjetis; 
+    }
 }

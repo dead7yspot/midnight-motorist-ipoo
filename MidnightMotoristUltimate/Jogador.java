@@ -125,7 +125,7 @@ public class Jogador extends Personagem {
         if (interagir) interagir();
     }
 
-    /** Usa o armamento selecionado e inicia a pose e a recarga adequadas. */
+    // Usa o armamento selecionado e inicia a pose e a recarga adequadas
     private void atacar() {
         if (recargaAtaque > 0) return;
         Equipamento selecionado = getEquipamentoSelecionado();
@@ -149,7 +149,7 @@ public class Jogador extends Personagem {
         return inventario.get(equipamentoSelecionado);
     }
 
-    /** Resume equipamento, municao, granadas e colete para o HUD. */
+    // resume equipamento, municao, granadas e colete como string
     public String obterEquipamentoTexto() {
         Equipamento item = getEquipamentoSelecionado();
         if (item == null) return "Desarmado  |  Granadas: " + granadas + "  |  Colete: " + escudo;
@@ -166,12 +166,13 @@ public class Jogador extends Personagem {
             if (item instanceof GranadaColetavel) {
                 adicionarGranadas(((GranadaColetavel) item).getQuantidade());
                 getWorld().removeObject(item);
-                Greenfoot.playSound("hit_som.wav");
+                Greenfoot.playSound("som_equip.wav");
                 ((FaseBase) getWorld()).coletouItem(30);
                 ((FaseBase) getWorld()).avisar("Granadas coletadas: " + granadas + ". Lance com "
-                                              + cmds.obterTeclaExibicao("LANCAR_GRANADA") + ".");
+                                              + cmds.obterTeclaExibicao("LANCAR_GRANADA") + "!");
                 return;
             }
+            
             if (item instanceof Colete) {
                 escudo = Math.min(90, escudo + 45);
                 getWorld().removeObject(item);
@@ -180,6 +181,7 @@ public class Jogador extends Personagem {
                 ((FaseBase) getWorld()).avisar("Colete equipado: protecao " + escudo);
                 return;
             }
+            
             if (item instanceof Dinheiro) {
                 int valor = ((Dinheiro) item).getValor();
                 getWorld().removeObject(item);
@@ -201,11 +203,16 @@ public class Jogador extends Personagem {
                 return;
             }
             int slot = 1;
-            while (inventario.containsKey(slot)) slot++;
+            
+            while (inventario.containsKey(slot))
+                slot++;
+            
             inventario.put(slot, item);
             equipamentoSelecionado = slot;
+            
             getWorld().removeObject(item);
-            Greenfoot.playSound("hit_som.wav");
+            Greenfoot.playSound("som_equip.wav");
+            
             if (getWorld() instanceof FaseBase) {
                 ((FaseBase) getWorld()).coletouItem(60);
                 ((FaseBase) getWorld()).avisar("Coletado: " + item.getNome());
@@ -227,18 +234,22 @@ public class Jogador extends Personagem {
         if (getWorld() instanceof FaseBase) ((FaseBase) getWorld()).avisar("CUIDADO! Voce sofreu dano.");
     }
 
-    /** Acrescenta as granadas obtidas numa coleta. */
+    // acrescenta as granadas obtidas numa coleta
     public void adicionarGranadas(int quantidade) {
-        if (quantidade > 0) granadas += quantidade;
+        if (quantidade > 0) 
+            granadas += quantidade;
     }
 
     /** Consulta a quantidade de granadas disponivel. */
-    public int getGranadas() { return granadas; }
+    public int getGranadas() { 
+        return granadas; 
+    }
 
-    /** Avisa a fase para abrir a tela de derrota. */
+    // Avisa a fase para abrir a tela de derrota
     @Override
     protected void aoMorrer() {
         super.aoMorrer();
-        if (getWorld() instanceof FaseBase) ((FaseBase) getWorld()).jogadorMorreu();
+        if (getWorld() instanceof FaseBase) 
+            ((FaseBase) getWorld()).jogadorMorreu();
     }
 }
