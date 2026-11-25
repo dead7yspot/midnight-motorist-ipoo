@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Jogador
-comment0.text=\r\n\ Jogador\ original\ do\ alvo_meu\:\ inventario,\ comandos\ remapeaveis\ e\ equipamento.\r\n\ Movimentacao\ e\ colisao\ foram\ reconstruidas\ a\ partir\ da\ ideia\ do\ V1.\r\n
+comment0.text=\n\ Jogador\ original\ do\ alvo_meu\:\ inventario,\ comandos\ remapeaveis\ e\ equipamento.\n\ Movimentacao\ e\ colisao\ foram\ reconstruidas\ a\ partir\ da\ ideia\ do\ V1.\n
 comment1.params=nome\ vidaInicial\ velocidade\ cmds
 comment1.target=Jogador(java.lang.String,\ int,\ int,\ GerenciadorComandos)
 comment1.text=Cria\ o\ inventario\ e\ carrega\ as\ poses\ de\ combate\ do\ protagonista.

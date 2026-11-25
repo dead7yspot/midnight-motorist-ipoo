@@ -5,7 +5,9 @@ public class TelaInicial extends World {
     private final GerenciadorComandos comandos;
 
     /** Abre o menu com os comandos padrao em uma partida nova. */
-    public TelaInicial() { this(criarComandosPadrao()); }
+    public TelaInicial() { 
+        this(criarComandosPadrao()); 
+    }
 
     /** Abre o menu preservando eventuais teclas reconfiguradas. */
     public TelaInicial(GerenciadorComandos comandos) {
@@ -153,7 +155,6 @@ public class TelaInicial extends World {
             "ACOES"
         );
 
-        // Estas acoes tambem participam do cadastro para evitar teclas duplicadas.
         cmds.adicionarComando(
             "INSTRUCOES",
             "i",

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=InimigoPatrulha
-comment0.text=\r\n\ Segundo\ comportamento\ de\ inimigo\:\ patrulha\ entre\ dois\ pontos\ e\r\n\ so\ persegue\ o\ jogador\ quando\ ele\ entra\ perto\ da\ patrulha.\r\n
+comment0.text=\n\ Segundo\ comportamento\ de\ inimigo\:\ patrulha\ entre\ dois\ pontos\ e\n\ so\ persegue\ o\ jogador\ quando\ ele\ entra\ perto\ da\ patrulha.\n
 comment1.params=nome\ jogador\ esquerda\ direita
 comment1.target=InimigoPatrulha(java.lang.String,\ Jogador,\ int,\ int)
 comment1.text=Configura\ o\ trecho\ patrulhado\ e\ o\ ataque\ corpo\ a\ corpo.

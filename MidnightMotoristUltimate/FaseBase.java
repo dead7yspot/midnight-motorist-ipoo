@@ -26,23 +26,27 @@ public class FaseBase extends World {
     private int derrotados;
 
 
-    /** Prepara o cenario, a ordem de desenho e a musica da fase. */
+    // Prepara o cenario, a ordem de desenho e a musica da fase
     public FaseBase(int numero, GerenciadorComandos comandos, EstadoPartida estado) {
         super(LARGURA, ALTURA, 1);
         this.numeroFase = numero;
         this.comandos = comandos;
         this.estado = estado;
+        
         GreenfootImage fundo = new GreenfootImage(numero == 3 ? "cidade_viva_fase3.png" : "cidade_viva_fase1.png");
         fundo.scale(LARGURA, ALTURA);
-        // Faixa de contraste para a pontuacao e a vida nao sumirem sobre o mapa.
+        
+        // faixa de contraste para a pontuacao e a vida nao sumirem sobre o mapa.
         fundo.setColor(new Color(12, 15, 20, 223));
         fundo.fillRect(0, 0, LARGURA, 44);
         fundo.setColor(new Color(77, 83, 91, 105));
         fundo.fillRect(0, 43, LARGURA, 1);
         setBackground(fundo);
+        
         setPaintOrder(TextoHUD.class, BarraVida.class, Placar.class, ItemEmpunhado.class,
                       Jogador.class, Inimigo.class, Equipamento.class, Projetil.class, LuzesCidade.class);
         addObject(new LuzesCidade(numero), LARGURA / 2, ALTURA / 2);
+        
         GerenciadorAudio.iniciarMusica("No More (Remastered).mp3");
     }
 
@@ -50,9 +54,12 @@ public class FaseBase extends World {
     protected void colocarJogador(Jogador anterior, int x, int y) {
         if (anterior != null) {
             anterior.removerItemMao();
-            if (anterior.getWorld() != null) anterior.getWorld().removeObject(anterior);
+            if (anterior.getWorld() != null) 
+                anterior.getWorld().removeObject(anterior);
             jogador = anterior;
         } else {
+            
+            // Jogador padrao: 110 de vida, velocidade 4 de pixeis
             jogador = new Jogador("Motorist", 110, 4, comandos);
         }
         addObject(jogador, x, y);
@@ -73,7 +80,7 @@ public class FaseBase extends World {
         atualizarHUD();
     }
 
-    /** Adiciona ao mapa um objeto com sua propria area de colisao. */
+    // Adiciona ao mapa um objeto com sua propria area de colisao
     protected void adicionarObstaculo(String nome, String imagem, int x, int y,
                                       int largura, int altura, int raioX, int raioY, int offsetY) {
         Cenario obj = new Cenario(nome, 0, false, true, imagem,
@@ -81,7 +88,7 @@ public class FaseBase extends World {
         addObject(obj, x, y);
     }
 
-    /** Marca discretamente no asfalto o ponto para sair da fase. */
+    // Marca discretamente no asfalto o ponto para sair da fase
     protected void definirSaida(int x, int y) {
         saida = new Cenario("Saida da rua", numeroFase, true, false,
                             "saida_chao.png", 86, 104, 0, 0, 0);

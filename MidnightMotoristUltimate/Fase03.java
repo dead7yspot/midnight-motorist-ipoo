@@ -5,10 +5,15 @@ public class Fase03 extends FaseBase {
     private boolean tanqueAtivo;
     private int tempoAbastecimento;
 
-    /** Prepara a fase final com o jogador vindo da perseguicao. */
+    // Prepara a fase final com o jogador vindo da perseguicao
     public Fase03(GerenciadorComandos comandos, EstadoPartida estado, Jogador anterior) {
         super(3, comandos, estado);
         prepararCenario(anterior);
+    }
+    
+    // construtor para debug, para facilitar testes
+    public Fase03() {
+        this(TelaInicial.criarComandosPadrao(), new EstadoPartida(), new Jogador("teste", 200, 4, TelaInicial.criarComandosPadrao()));
     }
 
     /** Posiciona o chefao, os suprimentos e os obstaculos do confronto. */
@@ -32,7 +37,11 @@ public class Fase03 extends FaseBase {
         int x = chefe.getX(), y = chefe.getY();
         tanqueAtivo = true;
         removeObject(chefe);
-        addObject(new TanqueChefe(alvo), x, y);
+        
+        addObject(new TanqueChefe(alvo, 
+              new ArmaFogo("Canhao", "Disparo de tanque", "revolverJogo.png",
+                           500, 600, 500, 32, 40, 1)), x, y);
+                           
         getEstado().adicionarPontos(250);
         adicionarGranadas();
         avisar("O CHEFE ENTROU NO TANQUE! Colete com "

@@ -42,19 +42,17 @@ public class Fase02 extends World {
         addObject(new CarroPolicia(), 70, 285);
         atualizarHUD();
   
-        GerenciadorAudio.iniciarMusica("sirene.wav");
         GerenciadorAudio.iniciarMusica("No More (Remastered).mp3");
     }
 
     // construtor debug para facilitar a fase de desenvolvimento (sem ter que ficar passando a fase 01 toda hora)
     public Fase02() {
-        this(TelaInicial.criarComandosPadrao(), new EstadoPartida(), new Jogador("teste", 100, 420, TelaInicial.criarComandosPadrao()));
+        this(TelaInicial.criarComandosPadrao(), new EstadoPartida(), new Jogador("teste", 100, 4, TelaInicial.criarComandosPadrao()));
     }
     
     public void act() {
         
         if (terminou) {
-            GerenciadorAudio.pararMusica();
             return;
         }
         boolean musicaAgora = comandoMusicaPressionado();
@@ -68,7 +66,7 @@ public class Fase02 extends World {
             addObject(new FaixaRodovia(), 1023, 220);
             addObject(new FaixaRodovia(), 1023, 350);
         }
-        if (tempo % 12 == 0) 
+        if (tempo % 8 == 0) 
             distanciaPolicia--;
             
         if (tempo % INTERVALO_TRANSITO == 0) {
@@ -83,10 +81,11 @@ public class Fase02 extends World {
             else addObject(new TurboRodovia(), 990, y);
         }
         
-        if (tempo == DURACAO - 150) addObject(new PlacaSaidaRodovia(), 990, 98);
+        if (tempo == DURACAO - 150) 
+            addObject(new PlacaSaidaRodovia(), 990, 98);
         atualizarHUD();
         
-        if (distanciaPolicia <= 0) {
+        if (distanciaPolicia <= 100) {
             terminou = true;
             Greenfoot.setWorld(new TelaPerseguicaoFim(comandos, estado, jogador));
         } else if (tempo >= DURACAO) {
@@ -119,7 +118,7 @@ public class Fase02 extends World {
     private void atualizarHUD() {
         showText("FASE 2 / FUGA     Pontos: " + estado.getPontos()
                  + "     POLICIA: " + Math.max(0, distanciaPolicia) + " m", 512, 13);
-        showText("PROGRESSO: " + (tempo * 100 / DURACAO) + "%     $: Pontos    N2O: Distancia da policia", 512, 33);
+        showText("PROGRESSO: " + (tempo * 100 / DURACAO) + "%     $: Pontos    N2O: Distanciar da policia", 512, 33);
     }
 
     // Verifica as teclas de musica configuradas para a perseguicao

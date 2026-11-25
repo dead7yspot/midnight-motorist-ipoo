@@ -8,12 +8,14 @@ public class GerenciadorAudio {
 
     // Troca a musica de fundo, preservando a preferencia de pausa
     public static void iniciarMusica(String arquivo) {
-        if (arquivo == null) return;
-        if (musica != null && arquivo.equals(arquivoAtual)) return;
+        if (arquivo == null) 
+            return;
+        if (musica != null && arquivo.equals(arquivoAtual)) 
+            return;
         pararMusica();
         
         musica = new GreenfootSound(arquivo);
-        musica.setVolume(45);
+        musica.setVolume(95);
         arquivoAtual = arquivo;
         if (!pausada) 
             musica.playLoop();
@@ -21,9 +23,12 @@ public class GerenciadorAudio {
 
     // Pausa ou retoma a musica atual
     public static void alternarMusica() {
-        if (musica == null) return;
-        if (pausada) musica.playLoop();
-        else musica.pause();
+        if (musica == null) 
+            return;
+        
+        if (pausada) 
+            musica.playLoop();
+        else musica.pause();    
         
         pausada = !pausada;
     }
