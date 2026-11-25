@@ -13,7 +13,9 @@ public class Fase02 extends World {
     private int distanciaPolicia = 760;
     private boolean terminou;
     private boolean musicaPressionada;
-
+    
+    private GreenfootSound sirene;
+    
     // Monta a rodovia preservando o protagonista e o placar anteriores
     public Fase02(GerenciadorComandos comandos, EstadoPartida estado, Jogador jogador) {
         super(1024, 572, 1);
@@ -22,6 +24,8 @@ public class Fase02 extends World {
         this.jogador = jogador;
         
         musicaPressionada = comandoMusicaPressionado();
+        
+        sirene = new GreenfootSound("sirene.wav");
         
         GreenfootImage fundo = new GreenfootImage("cidade_viva_fase2.png");
         fundo.setColor(new Color(12, 15, 20, 225));
@@ -41,7 +45,9 @@ public class Fase02 extends World {
         addObject(new CarroJogador(comandos), 220, 285);
         addObject(new CarroPolicia(), 70, 285);
         atualizarHUD();
-  
+        
+        sirene.playLoop();
+        
         GerenciadorAudio.iniciarMusica("No More (Remastered).mp3");
     }
 
@@ -51,10 +57,6 @@ public class Fase02 extends World {
     }
     
     public void act() {
-        
-        if (terminou) {
-            return;
-        }
         boolean musicaAgora = comandoMusicaPressionado();
         
         if (musicaAgora && !musicaPressionada) 
@@ -85,10 +87,15 @@ public class Fase02 extends World {
             addObject(new PlacaSaidaRodovia(), 990, 98);
         atualizarHUD();
         
+        // Condicoes que terminam a fase
         if (distanciaPolicia <= 100) {
+            sirene.stop();
+            
             terminou = true;
             Greenfoot.setWorld(new TelaPerseguicaoFim(comandos, estado, jogador));
         } else if (tempo >= DURACAO) {
+            sirene.stop();
+            
             terminou = true;
             estado.adicionarPontos(270);
             Greenfoot.setWorld(new TelaVitoriaFase(2, comandos, estado, jogador));

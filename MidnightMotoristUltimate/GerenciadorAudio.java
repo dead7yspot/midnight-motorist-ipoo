@@ -20,7 +20,7 @@ public class GerenciadorAudio {
         if (!pausada) 
             musica.playLoop();
     }
-
+    
     // Pausa ou retoma a musica atual
     public static void alternarMusica() {
         if (musica == null) 

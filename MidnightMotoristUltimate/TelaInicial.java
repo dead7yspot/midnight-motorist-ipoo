@@ -27,9 +27,13 @@ public class TelaInicial extends World {
     /** Le as opcoes de jogar, instrucoes, configuracao e musica. */
     public void act() {
         String tecla = Greenfoot.getKey();
+        
         if (tecla == null) return;
         String comando = comandos.obterComando(tecla);
-        if ("ALTERNAR_MUSICA".equals(comando)) GerenciadorAudio.alternarMusica();
+        
+        if ("ALTERNAR_MUSICA".equals(comando)) 
+            GerenciadorAudio.alternarMusica();
+        
         if ("INICIAR_JOGO".equals(comando)) {
             Greenfoot.setWorld(new Fase01(comandos, new EstadoPartida()));
         } else if ("INSTRUCOES".equals(comando)) {
