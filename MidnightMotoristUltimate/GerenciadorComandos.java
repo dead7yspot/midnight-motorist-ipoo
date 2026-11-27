@@ -46,7 +46,7 @@ public class GerenciadorComandos {
         return comandos.get(nome).getTeclas().contains(tecla.toLowerCase());
     }
 
-    /** Associa uma tecla livre a um comando existente. */
+    // Associa uma tecla livre a um comando existente
     public boolean adicionarTecla(String nome, String tecla) {
         if (nome == null || tecla == null) {
             return false;
@@ -76,7 +76,7 @@ public class GerenciadorComandos {
         return false;
     }
     
-    /** Consulta as teclas do comando sem expor a lista interna. */
+    // consulta as teclas do comando sem expor a lista interna
     public ArrayList<String> obterTeclas(String nome) {
 
         if (!comandos.containsKey(nome)) {
@@ -87,20 +87,29 @@ public class GerenciadorComandos {
         return comandos.get(nome).getTeclas();
     }
 
-    /** Formata a primeira tecla para as instrucoes e os avisos do jogo. */
+    // formata a primeira tecla para as instrucoes e os avisos do jogo
     public String obterTeclaExibicao(String nome) {
         ArrayList<String> teclas = obterTeclas(nome);
-        if (teclas.isEmpty()) return "?";
+        if (teclas.isEmpty()) 
+            return "?";
+        
         String tecla = teclas.get(0);
-        if ("space".equals(tecla)) return "ESPACO";
-        if ("up".equals(tecla)) return "CIMA";
-        if ("down".equals(tecla)) return "BAIXO";
-        if ("left".equals(tecla)) return "ESQ";
-        if ("right".equals(tecla)) return "DIR";
+        
+        if ("space".equals(tecla)) 
+            return "ESPACO";
+        if ("up".equals(tecla)) 
+            return "CIMA";
+        if ("down".equals(tecla)) 
+            return "BAIXO";
+        if ("left".equals(tecla)) 
+            return "ESQ";
+        if ("right".equals(tecla)) 
+            return "DIR";
+            
         return tecla.toUpperCase();
     }
 
-    /** Resume as teclas principais de movimento e indica as setas quando disponiveis. */
+    // Resume as teclas principais de movimento e indica as setas quando disponiveis
     public String obterMovimentoExibicao() {
         String movimento = obterTeclaExibicao("MOVER_CIMA") + "/" + obterTeclaExibicao("MOVER_ESQUERDA")
                          + "/" + obterTeclaExibicao("MOVER_BAIXO") + "/" + obterTeclaExibicao("MOVER_DIREITA");

@@ -1,10 +1,8 @@
 #BlueJ class context
 comment0.target=TurboRodovia
-comment0.text=Turbo\ afastando\ a\ viatura\ e\ gerando\ pontos.
+comment0.text=\ \r\n\ Turbo/N2o\ \=\ acrescenta\ pontos\ e\ afasta\ a\ viatura\ do\ jogador\r\n
 comment1.params=
 comment1.target=TurboRodovia()
-comment1.text=Cria\ a\ coleta\ de\ turbo\ da\ rodovia.
 comment2.params=fase
 comment2.target=void\ aplicar(Fase02)
-comment2.text=Da\ pontos\ e\ aumenta\ a\ distancia\ da\ viatura.
 numComments=3

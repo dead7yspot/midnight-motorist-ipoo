@@ -9,16 +9,20 @@ public abstract class ItemRodovia extends Actor {
         setImage(sprite);
     }
 
-    /** Desloca o item e aplica seu efeito quando o carro o coleta. */
+    // Desloca o item e aplica seu efeito quando o carro o coleta
     public void act() {
-        if (getWorld() == null) return;
+        if (getWorld() == null) 
+            return;
+        
         if (isTouching(CarroJogador.class)) {
             aplicar((Fase02) getWorld());
             getWorld().removeObject(this);
-        } else if (getX() < 8) getWorld().removeObject(this);
-        else setLocation(getX() - 6, getY());
+        } else if (getX() < 8) 
+            getWorld().removeObject(this);
+        else 
+            setLocation(getX() - 6, getY());
     }
 
-    /** Cada tipo de item define seu proprio efeito na perseguicao. */
+    // Cada tipo de item define seu proprio efeito na perseguicao
     protected abstract void aplicar(Fase02 fase);
 }

@@ -97,26 +97,34 @@ public class FaseBase extends World {
         addObject(saida, x, y);
     }
 
-    /** Atualiza os indicadores e controla a duracao dos avisos. */
+    // Atualiza os indicadores e controla a duracao dos avisos
     public void act() {
-        if (terminou || jogador == null) return;
+        if (terminou || jogador == null) 
+            return;
+            
         atualizarHUD();
-        if (tempoAviso > 0) tempoAviso--;
-        if (tempoAviso == 0) aviso = "";
+        if (tempoAviso > 0) 
+            tempoAviso--;
+        if (tempoAviso == 0) 
+            aviso = "";
         avisoHUD.definirTexto(aviso);
     }
 
-    /** Mostra vida, pontos, equipamento e objetivo atual. */
+    // Mostra vida, pontos, equipamento e objetivo atual
     private void atualizarHUD() {
-        if (barraVida != null) barraVida.atualizar(jogador.getVida());
-        if (placar != null) placar.definirPontos(estado.getPontos());
+        if (barraVida != null) 
+            barraVida.atualizar(jogador.getVida());
+        if (placar != null) 
+            placar.definirPontos(estado.getPontos());
         tituloHUD.definirTexto("FASE " + numeroFase);
         itemHUD.definirTexto(jogador.obterEquipamentoTexto());
+        
         if (numeroFase == 1) {
             if (totalInimigos > 0 && derrotados >= totalInimigos)
                 objetivoHUD.definirTexto("RUA LIVRE - VA A DIREITA E PRESSIONE "
                                        + comandos.obterTeclaExibicao("INTERAGIR"));
-            else objetivoHUD.definirTexto("INIMIGOS " + derrotados + "/" + totalInimigos + " - elimine TODOS!");
+            else 
+                objetivoHUD.definirTexto("INIMIGOS " + derrotados + "/" + totalInimigos + " - elimine TODOS!");
         } else if (numeroFase < 3) {
             objetivoHUD.definirTexto("Encontre a saida");
         } else {
@@ -130,25 +138,32 @@ public class FaseBase extends World {
         }
     }
 
-    /** Mostra uma mensagem temporaria ao jogador. */
+    // Mostra uma mensagem temporaria ao jogador
     public void avisar(String mensagem) {
         aviso = mensagem;
         tempoAviso = 125;
     }
 
-    /** Soma ao placar os pontos recebidos por uma coleta. */
-    public void coletouItem(int pontos) { estado.adicionarPontos(pontos); }
+    // Soma ao placar os pontos recebidos por uma coleta
+    public void coletouItem(int pontos) { 
+        estado.adicionarPontos(pontos); 
+    }
 
-    /** Numero de inimigos e declarado pela fase que os cria. */
+    // Numero de inimigos e declarado pela fase que os cria
     protected void configurarObjetivoAbates(int quantidade) {
         totalInimigos = quantidade;
         derrotados = 0;
-        if (jogador != null) atualizarHUD();
+        
+        if (jogador != null) 
+            atualizarHUD();
     }
 
-    /** Atualiza pontos e objetivos quando um inimigo e derrotado. */
+    /** Atualiza pontos e objetivos quando um inimigo e derrotado. 
+    */
     public void inimigoDerrotado(int pontos, Inimigo inimigo) {
-        if (terminou) return;
+        if (terminou) 
+            return;
+        
         estado.adicionarPontos(pontos);
         if (numeroFase == 1 && totalInimigos > 0) {
             derrotados++;
@@ -164,18 +179,22 @@ public class FaseBase extends World {
         }
     }
 
-    /** Verifica objetivo e proximidade antes de liberar a saida da rua. */
+    // Verifica objetivo e proximidade antes de liberar a saida da rua
     public void tentarSair(Jogador solicitante) {
-        if (terminou || solicitante != jogador || saida == null) return;
+        if (terminou || solicitante != jogador || saida == null) 
+            return;
+        
         if (numeroFase == 1 && derrotados < totalInimigos) {
             avisar("Derrote todos os inimigos antes de sair.");
             return;
         }
+        
         if (Math.abs(jogador.getX()-saida.getX()) >= 61
             || Math.abs(jogador.getY()-saida.getY()) >= 68) {
             avisar("Aproxime-se da saida a direita para atravessar.");
             return;
         }
+        
         if (numeroFase == 1) {
             terminou = true;
             estado.adicionarPontos(200);
@@ -183,28 +202,43 @@ public class FaseBase extends World {
         }
     }
 
-    /** Encerra a fase atual e abre a derrota. */
+    // Encerra a fase atual e abre a derrota
     public void jogadorMorreu() {
-        if (terminou) return;
+        if (terminou) 
+            return;
         terminou = true;
+        
         GerenciadorAudio.pararMusica();
         Greenfoot.setWorld(new TelaGameOver(comandos, estado));
     }
 
-    /** Encerra o confronto final e abre o resultado da partida. */
+    // encerra o confronto final e abre o resultado da partida
     public void terminarComVitoria() {
-        if (terminou) return;
+        if (terminou) 
+            return;
         terminou = true;
+        
         GerenciadorAudio.pararMusica();
         Greenfoot.setWorld(new TelaVitoria(comandos, estado));
     }
 
-    /** Devolve os comandos configurados da partida. */
-    public GerenciadorComandos getComandos() { return comandos; }
-    /** Devolve o estado compartilhado entre as fases. */
-    public EstadoPartida getEstado() { return estado; }
-    /** Informa o numero desta fase. */
-    public int getNumeroFase() { return numeroFase; }
-    /** Devolve o protagonista presente na fase. */
-    public Jogador getJogador() { return jogador; }
+    // Devolve os comandos configurados da partida
+    public GerenciadorComandos getComandos() { 
+        return comandos;
+    }
+    
+    // devolve o estado compartilhado entre as fases
+    public EstadoPartida getEstado() { 
+        return estado; 
+    }
+    
+    // informa o numero desta fase
+    public int getNumeroFase() {
+        return numeroFase; 
+    }
+    
+    // Devolve o protagonista presente na fase
+    public Jogador getJogador() { 
+        return jogador; 
+    }
 }

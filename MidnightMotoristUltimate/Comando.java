@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 
-/** Representa um comando e guarda suas teclas, apelido e categoria. */
+/** Representa um comando e guarda suas teclas, 
+ * 
+ * apelido e categoria. */
 
 public class Comando {
     private String alias;
     private String categoria;
     private ArrayList<String> teclas;
 
-    /** Cria o comando com seu nome de exibicao, categoria e primeira tecla. */
+    // cria o comando com seu nome de exibicao, categoria e primeira tecla
     public Comando(String alias, String categoria, String teclaInicial) {
         this.alias = alias;
         this.categoria = categoria;
@@ -16,7 +18,7 @@ public class Comando {
         teclas.add(teclaInicial.toLowerCase());
     }
 
-    /** Consulta o nome apresentado ao jogador. */
+    // retorna o "vulgo", nome de exibicao (ex: MOVER_CIMA -> "Andar para cima")
     public String getAlias() {
         return alias;
     }

@@ -1,9 +1,9 @@
 import greenfoot.*;
 
 /**
- * Objeto do ambiente. O proprio cenario define se bloqueia a passagem,
- * o tamanho da area de colisao e se pode ser usado como saida.
- * As imagens nao determinam a colisao: somente a base do objeto o faz.
+ * Objeto do ambiente. O objeto do cenario define se a passagem por ali esta bloqueada,
+ * o tamanho da area de colisao e se podem ser usados como saida.
+ * os sprites em si nao determinam a colisao
  */
 public class Cenario extends Actor {
     private String nome;
@@ -14,12 +14,12 @@ public class Cenario extends Actor {
     private int meiaAltura;
     private int deslocamentoY;
 
-    /** Cria um objeto de cenario com dimensoes padrao. */
+    // Cria um objeto de cenario com dimensoes padrao
     public Cenario(String nome, int id, boolean interativo, String imagem) {
         this(nome, id, interativo, !interativo, imagem, 65, 65, 25, 13, 0);
     }
 
-    /** Configura imagem, interacao e caixa de colisao do objeto. */
+    // configura imagem, interacao e caixa de colisao do objeto
     public Cenario(String nome, int id, boolean interativo, boolean bloqueia,
                    String imagem, int larguraImagem, int alturaImagem,
                    int meiaLargura, int meiaAltura, int deslocamentoY) {
@@ -30,23 +30,35 @@ public class Cenario extends Actor {
         this.meiaLargura = meiaLargura;
         this.meiaAltura = meiaAltura;
         this.deslocamentoY = deslocamentoY;
+        
         GreenfootImage img = new GreenfootImage(imagem);
         img.scale(larguraImagem, alturaImagem);
+        
         setImage(img);
     }
 
-    /** Testa caixas de colisao pequenas, independentes da transparencia do sprite. */
+    // testa caixas de colisao pequenas, independentes da transparencia do sprite
     public boolean bloqueiaPosicao(int x, int y, int raioX, int raioY) {
         if (!bloqueia) return false;
         int centroY = getY() + deslocamentoY;
+        
+        // valor absoluto para garantir valores não negativos
         return Math.abs(x - getX()) < meiaLargura + raioX
             && Math.abs(y - centroY) < meiaAltura + raioY;
     }
 
-    /** Consulta o nome do objeto de cenario. */
-    public String getNome() { return nome; }
-    /** Consulta o identificador do objeto. */
-    public int getId() { return id; }
-    /** Informa se o objeto pode ser acessado. */
-    public boolean acessar() { return interativo; }
+    // getter de nome
+    public String getNome() { 
+        return nome; 
+    }
+    
+    // getter de identificador
+    public int getId() { 
+        return id; 
+    }
+    
+    // informa se o obj é acessivel / interativo
+    public boolean acessar() { 
+        return interativo; 
+    }
 }

@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Personagem
-comment0.text=\n\ Base\ de\ jogador\ e\ inimigos\:\ vida,\ animacao,\ movimentacao\ e\ combate.\n\ A\ colisao\ vem\ da\ versao\ V1\:\ mover\ um\ eixo\ por\ vez,\ usando\ a\ base\ do\ pe.\n\ Atores\ possuem\ sprites\ visuais,\ mas\ nao\ dependem\ do\ tamanho\ da\ imagem\ para\ colidir.\n
+comment0.text=\r\n\ Base\ de\ jogador\ e\ inimigos\:\ vida,\ animacao,\ movimentacao\ e\ combate.\r\n\ A\ colisao\ vem\ da\ versao\ V1\:\ mover\ um\ eixo\ por\ vez,\ usando\ a\ base\ do\ pe.\r\n\ Atores\ possuem\ sprites\ visuais,\ mas\ nao\ dependem\ do\ tamanho\ da\ imagem\ para\ colidir.\r\n
 comment1.params=nome\ vida\ velocidade\ arquivoParado\ arquivoA\ arquivoB
 comment1.target=Personagem(java.lang.String,\ int,\ int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
-comment1.text=\ \n\ Guarda\ os\ dados\ do\ personagem\ e\ carrega\ suas\ poses\ basicas.\ \n
+comment1.text=\ \r\n\ Guarda\ os\ dados\ do\ personagem\ e\ carrega\ suas\ poses\ basicas.\ \r\n
 comment10.params=
 comment10.target=void\ removerItemMao()
 comment11.params=arma
@@ -26,7 +26,7 @@ comment19.params=
 comment19.target=boolean\ isOlhandoDireita()
 comment2.params=dx\ dy
 comment2.target=boolean\ moverComColisao(int,\ int)
-comment2.text=\ Move\ X\ e\ Y\ separadamente;\ cada\ eixo\ avanca\ em\ passos\ unitarios.\n\ \ Evita\ atravessar\ paredes\ em\ velocidades\ maiores\ e\ permite\ deslizar.\n
+comment2.text=\ Move\ X\ e\ Y\ separadamente;\ cada\ eixo\ avanca\ em\ passos\ unitarios.\r\n\ \ Evita\ atravessar\ paredes\ em\ velocidades\ maiores\ e\ permite\ deslizar.\r\n
 comment20.params=quantia
 comment20.target=void\ recuperarVida(int)
 comment3.params=x\ y

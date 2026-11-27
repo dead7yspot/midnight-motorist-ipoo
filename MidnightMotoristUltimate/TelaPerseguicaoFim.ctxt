@@ -6,5 +6,4 @@ comment1.target=TelaPerseguicaoFim(GerenciadorComandos,\ EstadoPartida,\ Jogador
 comment1.text=Mostra\ a\ derrota\ na\ rodovia\ e\ guarda\ os\ dados\ do\ checkpoint.
 comment2.params=
 comment2.target=void\ act()
-comment2.text=Repete\ a\ perseguicao\ ou\ devolve\ o\ jogador\ ao\ menu.
 numComments=3

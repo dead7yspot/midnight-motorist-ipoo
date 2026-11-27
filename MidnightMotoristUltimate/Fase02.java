@@ -14,9 +14,12 @@ public class Fase02 extends World {
     private boolean terminou;
     private boolean musicaPressionada;
     
+    // Responsavel pela sirene da policia que é utilizada somente nesta fase;
+    // deixar sob responsabilidade da GerenciadorAudio pode causar resultados inesperados devido às 
+    // musicas de fundo
     private GreenfootSound sirene;
     
-    // Monta a rodovia preservando o protagonista e o placar anteriores
+    // Monta a rodovia preservando o protagonista e o placar anteriores (passados por parametrO)
     public Fase02(GerenciadorComandos comandos, EstadoPartida estado, Jogador jogador) {
         super(1024, 572, 1);
         this.comandos = comandos;
@@ -47,8 +50,10 @@ public class Fase02 extends World {
         atualizarHUD();
         
         sirene.playLoop();
+        // tava muito alto
+        sirene.setVolume(75);
         
-        GerenciadorAudio.iniciarMusica("No More (Remastered).mp3");
+        GerenciadorAudio.iniciarMusica("midlife-crisis.mp3");
     }
 
     // construtor debug para facilitar a fase de desenvolvimento (sem ter que ficar passando a fase 01 toda hora)
@@ -68,7 +73,7 @@ public class Fase02 extends World {
             addObject(new FaixaRodovia(), 1023, 220);
             addObject(new FaixaRodovia(), 1023, 350);
         }
-        if (tempo % 8 == 0) 
+        if (tempo % 4 == 0) 
             distanciaPolicia--;
             
         if (tempo % INTERVALO_TRANSITO == 0) {
@@ -79,12 +84,20 @@ public class Fase02 extends World {
         
         if (tempo % 235 == 0) {
             int y = 155 + Greenfoot.getRandomNumber(3) * 130;
-            if ((tempo / 235) % 2 == 0) addObject(new BonusRodovia(), 990, y);
+            
+            // tempo para criar um objeto nitro
+            if ((tempo / 235) % 2 == 0) 
+                addObject(new BonusRodovia(), 990, y);
             else addObject(new TurboRodovia(), 990, y);
         }
         
         if (tempo == DURACAO - 150) 
             addObject(new PlacaSaidaRodovia(), 990, 98);
+        
+        // a viatura esta relativamente e perigosamente perto do jogador. Exibir um aviso
+        if (distanciaPolicia <= 400) {
+            showText("CUIDADO! A POLICIA ESTÁ NA SUA COLA!\nPEGUE NITRO PARA SE DISTANCIAR", 512, 520);
+        }
         atualizarHUD();
         
         // Condicoes que terminam a fase
@@ -104,8 +117,9 @@ public class Fase02 extends World {
 
     // aproxima a policia quando o carro bate em um obstaculo. 
     public void colisao() {
-        if (terminou) return;
-        distanciaPolicia -= 110;
+        if (terminou) 
+            return;
+        distanciaPolicia -= 150;
         Greenfoot.playSound("veh_col.wav");
     }
 
@@ -114,10 +128,12 @@ public class Fase02 extends World {
         return distanciaPolicia; 
     }
 
-    // Aplica os pontos e o afastamento obtidos com um item da rodovia.
+    // Aplica os pontos e o afastamento obtidos com um item da rodovia
     public void bonus(int pontos, int distancia) {
         estado.adicionarPontos(pontos);
+        
         distanciaPolicia = Math.min(850, distanciaPolicia + distancia);
+        
         Greenfoot.playSound("som_pickup.wav");
     }
 

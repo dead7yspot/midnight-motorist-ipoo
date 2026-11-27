@@ -70,7 +70,9 @@ public class TelaInicial extends World {
 
     /** Acrescenta uma linha de texto sobre a capa. */
     private void desenhar(String texto, int tamanho, Color cor, int x, int y) {
-        getBackground().drawImage(new GreenfootImage(texto, tamanho, cor, null), x, y);
+        getBackground().drawImage(
+            new GreenfootImage(texto, tamanho, cor, null), x, y
+        );
     }
     /** Registra as teclas padrao e seus atalhos alternativos. */
     private static void criarComandos(GerenciadorComandos cmds) {

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Fase02
-comment0.text=\ \n\ Fase\ da\ perseguicao\ policial\n
+comment0.text=\ \r\n\ Fase\ da\ perseguicao\ policial\r\n
 comment1.params=comandos\ estado\ jogador
 comment1.target=Fase02(GerenciadorComandos,\ EstadoPartida,\ Jogador)
 comment2.params=

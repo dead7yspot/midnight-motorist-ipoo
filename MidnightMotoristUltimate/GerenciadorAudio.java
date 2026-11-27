@@ -15,7 +15,7 @@ public class GerenciadorAudio {
         pararMusica();
         
         musica = new GreenfootSound(arquivo);
-        musica.setVolume(95);
+        musica.setVolume(75);
         arquivoAtual = arquivo;
         if (!pausada) 
             musica.playLoop();

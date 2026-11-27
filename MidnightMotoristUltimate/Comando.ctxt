@@ -1,12 +1,10 @@
 #BlueJ class context
 comment0.target=Comando
-comment0.text=Representa\ um\ comando\ e\ guarda\ suas\ teclas,\ apelido\ e\ categoria.
+comment0.text=\ Representa\ um\ comando\ e\ guarda\ suas\ teclas,\ \r\n\ \r\napelido\ e\ categoria.
 comment1.params=alias\ categoria\ teclaInicial
 comment1.target=Comando(java.lang.String,\ java.lang.String,\ java.lang.String)
-comment1.text=Cria\ o\ comando\ com\ seu\ nome\ de\ exibicao,\ categoria\ e\ primeira\ tecla.
 comment2.params=
 comment2.target=java.lang.String\ getAlias()
-comment2.text=Consulta\ o\ nome\ apresentado\ ao\ jogador.
 comment3.params=
 comment3.target=java.lang.String\ getCategoria()
 comment3.text=Consulta\ o\ grupo\ ao\ qual\ o\ comando\ pertence.
