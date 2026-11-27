@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TelaPerseguicaoFim
-comment0.text=Tela\ de\ derrota\ na\ rodovia,\ com\ opcao\ de\ tentar\ novamente\ do\ checkpoint.
+comment0.text=\ \r\n\ Tela\ de\ derrota\ na\ rodovia,\ tamb\u00E9m\ com\ opcao\ de\ tentar\ novamente\ \r\n\ \r\n
 comment1.params=comandos\ estado\ jogador
 comment1.target=TelaPerseguicaoFim(GerenciadorComandos,\ EstadoPartida,\ Jogador)
 comment1.text=Mostra\ a\ derrota\ na\ rodovia\ e\ guarda\ os\ dados\ do\ checkpoint.

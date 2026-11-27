@@ -1,26 +1,20 @@
 #BlueJ class context
 comment0.target=Fase03
-comment0.text=Confronto\ final\ em\ duas\ partes\:\ chefe\ humano,\ depois\ tanque.
+comment0.text=\ \r\n\ Confronto\ final\ em\ duas\ partes\:\ \r\n\ Chefe\ a\ p\u00E9\ e\ depois\ em\ um\ tanque\ \r\n
 comment1.params=comandos\ estado\ anterior
 comment1.target=Fase03(GerenciadorComandos,\ EstadoPartida,\ Jogador)
 comment2.params=
 comment2.target=Fase03()
 comment3.params=anterior
 comment3.target=void\ prepararCenario(Jogador)
-comment3.text=Posiciona\ o\ chefao,\ os\ suprimentos\ e\ os\ obstaculos\ do\ confronto.
 comment4.params=chefe\ alvo
 comment4.target=void\ iniciarFaseTanque(ChefeFinal,\ Jogador)
-comment4.text=A\ propria\ fase\ coordena\ a\ troca\ de\ forma\ e\ a\ disponibilizacao\ das\ granadas.
 comment5.params=
 comment5.target=void\ adicionarGranadas()
-comment5.text=Espalha\ as\ primeiras\ granadas\ coletaveis\ quando\ o\ tanque\ aparece.
 comment6.params=
 comment6.target=void\ act()
-comment6.text=Reabastece\ o\ mapa\ periodicamente\ para\ permitir\ novas\ tentativas.
 comment7.params=
 comment7.target=boolean\ estaNoTanque()
-comment7.text=Informa\ se\ o\ chefao\ ja\ entrou\ no\ tanque.
 comment8.params=
 comment8.target=int\ getVidaChefe()
-comment8.text=Consulta\ a\ vida\ da\ forma\ do\ chefe\ que\ estiver\ ativa.
 numComments=9

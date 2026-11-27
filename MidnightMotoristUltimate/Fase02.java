@@ -36,8 +36,7 @@ public class Fase02 extends World {
         setBackground(fundo);
         
         setPaintOrder(CarroJogador.class, CarroPolicia.class, ItemRodovia.class,
-                      ObstaculoRodovia.class, PlacaSaidaRodovia.class, FaixaRodovia.class, LuzesCidade.class);
-        addObject(new LuzesCidade(2), 512, 286);
+                      ObstaculoRodovia.class, PlacaSaidaRodovia.class, FaixaRodovia.class);
         
         // cuida das faixas se movendo pra dar sensacao de velocidade
         for (int x = 35; x < 1024; x += 140) {
@@ -97,7 +96,8 @@ public class Fase02 extends World {
         // a viatura esta relativamente e perigosamente perto do jogador. Exibir um aviso
         if (distanciaPolicia <= 400) {
             showText("CUIDADO! A POLICIA ESTÁ NA SUA COLA!\nPEGUE NITRO PARA SE DISTANCIAR", 512, 520);
-        }
+        }   else showText("", 512, 520);
+        
         atualizarHUD();
         
         // Condicoes que terminam a fase
@@ -111,7 +111,7 @@ public class Fase02 extends World {
             
             terminou = true;
             estado.adicionarPontos(270);
-            Greenfoot.setWorld(new TelaVitoriaFase(2, comandos, estado, jogador));
+            Greenfoot.setWorld(new TelaVitoriaFase(2, comandos, estado, jogador, "midlife-crisis_transicao2.mp3"));
         }
     }
 

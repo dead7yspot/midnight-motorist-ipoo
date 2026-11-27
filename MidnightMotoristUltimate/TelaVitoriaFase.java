@@ -9,7 +9,7 @@ public class TelaVitoriaFase extends World {
 
     // Apresenta a vitoria da fase e guarda o jogador para a proxima
     public TelaVitoriaFase(int faseConcluida, GerenciadorComandos comandos,
-                           EstadoPartida estado, Jogador jogador) {
+                           EstadoPartida estado, Jogador jogador, String musica) {
         super(1024, 572, 1);
         
         // qual fase foi concluida
@@ -25,15 +25,17 @@ public class TelaVitoriaFase extends World {
         escreverPlacar();
         
         // musica para essa fase concluida
-        GerenciadorAudio.iniciarMusica("Relaxed Scene.mp3");
+        GerenciadorAudio.iniciarMusica(musica);
     }
 
     /** Mostra pontos, tempo e instrucoes para continuar. */
     private void escreverPlacar() {
         GreenfootImage fundo = getBackground();
+        
         fundo.drawImage(new GreenfootImage("PONTOS DA FASE: " + estado.getPontosFase(faseConcluida)
              + "    TOTAL: " + estado.getPontos() + "    TEMPO: " + estado.getSegundos() + "s",
              18, Color.WHITE, null), 60, 465);
+             
         fundo.drawImage(new GreenfootImage("ENTER / ESPACO: PROXIMA FASE    |    ESC: MENU",
              17, Color.WHITE, null), 60, 520);
     }

@@ -12,6 +12,7 @@ public class GerenciadorAudio {
             return;
         if (musica != null && arquivo.equals(arquivoAtual)) 
             return;
+        // caso já esteja tocando alguma musica
         pararMusica();
         
         musica = new GreenfootSound(arquivo);

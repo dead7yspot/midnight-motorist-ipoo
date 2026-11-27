@@ -1,10 +1,9 @@
 #BlueJ class context
 comment0.target=Granada
-comment0.text=Granada\ arremessada\ pelo\ jogador,\ com\ alcance\ limitado\ e\ efeito\ visual.
+comment0.text=\ arma\ Granada\ com\ alcance\ limitado\ e\ efeito\ visual\r\n\ funciona\ diferente\ de\ um\ armamento\ normal,\ ent\u00E3o\ herda\ de\ Actor\ ao\ inves\ de\ Armamento\r\n
 comment1.params=direcao\ yInicial
 comment1.target=Granada(int,\ int)
-comment1.text=Prepara\ uma\ granada\ com\ direcao\ e\ altura\ iniciais.
+comment1.text=\ \r\n\ \ Prepara\ uma\ granada\ com\ direcao\ e\ altura\ iniciais\ \r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=Move\ a\ granada\ em\ arco\ e\ aplica\ o\ impacto\ uma\ vez\ no\ tanque.
 numComments=3

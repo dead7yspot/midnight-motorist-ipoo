@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=TelaVitoriaFase
 comment0.text=Tela\ exclusiva\ de\ missao\ concluida,\ com\ arte\ que\ mostra\ o\ protagonista\ vitorioso.
-comment1.params=faseConcluida\ comandos\ estado\ jogador
-comment1.target=TelaVitoriaFase(int,\ GerenciadorComandos,\ EstadoPartida,\ Jogador)
+comment1.params=faseConcluida\ comandos\ estado\ jogador\ musica
+comment1.target=TelaVitoriaFase(int,\ GerenciadorComandos,\ EstadoPartida,\ Jogador,\ java.lang.String)
 comment2.params=
 comment2.target=void\ escreverPlacar()
 comment2.text=Mostra\ pontos,\ tempo\ e\ instrucoes\ para\ continuar.

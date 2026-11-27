@@ -7,9 +7,11 @@ public class ArteTelas {
         return carregar("cinema_inicio.png");
     }
 
-    //  Escolhe a arte correspondente a vitoria ou derrota de cada fase.
+    //  escolhe a arte correspondente a vitoria ou derrota de cada fase
+    // ex: cinema_derrota2.png
     public static GreenfootImage criarResultado(int fase, boolean vitoria) {
         String resultado = vitoria ? "vitoria" : "derrota";
+        
         return carregar("cinema_" + resultado + fase + ".png");
     }
 

@@ -18,7 +18,10 @@ public class FaseBase extends World {
     private GreenfootImage marcaSaida;
     private BarraVida barraVida;
     private Placar placar;
-    private TextoHUD tituloHUD, itemHUD, objetivoHUD, avisoHUD;
+    private TextoHUD tituloHUD,
+                     itemHUD, 
+                     objetivoHUD, 
+                     avisoHUD;
     private boolean terminou;
     private String aviso = "";
     private int tempoAviso;
@@ -44,33 +47,31 @@ public class FaseBase extends World {
         setBackground(fundo);
         
         setPaintOrder(TextoHUD.class, BarraVida.class, Placar.class, ItemEmpunhado.class,
-                      Jogador.class, Inimigo.class, Equipamento.class, Projetil.class, LuzesCidade.class);
-        addObject(new LuzesCidade(numero), LARGURA / 2, ALTURA / 2);
-        
-        GerenciadorAudio.iniciarMusica("No More (Remastered).mp3");
+                      Jogador.class, Inimigo.class, Equipamento.class, Projetil.class);
     }
 
     /** Reutiliza o mesmo Jogador entre fases: preserva vida, equipamentos e comandos. */
     protected void colocarJogador(Jogador anterior, int x, int y) {
         if (anterior != null) {
             anterior.removerItemMao();
+            
             if (anterior.getWorld() != null) 
                 anterior.getWorld().removeObject(anterior);
             jogador = anterior;
         } else {
-            
             // Jogador padrao: 110 de vida, velocidade 4 de pixeis
             jogador = new Jogador("Motorist", 110, 4, comandos);
         }
+        
         addObject(jogador, x, y);
         barraVida = new BarraVida(jogador.getVidaMaxima());
         placar = new Placar();
         addObject(barraVida, 85, 14);
         addObject(placar, LARGURA - 70, 14);
-        tituloHUD = new TextoHUD(14, Color.WHITE);
         
+        tituloHUD = new TextoHUD(14, Color.WHITE);
         itemHUD = new TextoHUD(30, Color.WHITE);
-        objetivoHUD = new TextoHUD(13, new Color(175, 217, 190));
+        objetivoHUD = new TextoHUD(20, new Color(175, 217, 190));
         avisoHUD = new TextoHUD(17, Color.WHITE);
         
         addObject(tituloHUD, 211, 13);
@@ -94,6 +95,7 @@ public class FaseBase extends World {
                             "saida_chao.png", 86, 104, 0, 0, 0);
         marcaSaida = new GreenfootImage(saida.getImage());
         saida.setImage(new GreenfootImage(1, 1));
+        
         addObject(saida, x, y);
     }
 
@@ -105,8 +107,10 @@ public class FaseBase extends World {
         atualizarHUD();
         if (tempoAviso > 0) 
             tempoAviso--;
+
         if (tempoAviso == 0) 
             aviso = "";
+            
         avisoHUD.definirTexto(aviso);
     }
 
@@ -114,8 +118,10 @@ public class FaseBase extends World {
     private void atualizarHUD() {
         if (barraVida != null) 
             barraVida.atualizar(jogador.getVida());
+            
         if (placar != null) 
             placar.definirPontos(estado.getPontos());
+            
         tituloHUD.definirTexto("FASE " + numeroFase);
         itemHUD.definirTexto(jogador.obterEquipamentoTexto());
         
@@ -129,10 +135,12 @@ public class FaseBase extends World {
             objetivoHUD.definirTexto("Encontre a saida");
         } else {
             Fase03 terceira = this instanceof Fase03 ? (Fase03) this : null;
+            
             if (terceira != null && terceira.estaNoTanque())
                 objetivoHUD.definirTexto("TANQUE HP: " + terceira.getVidaChefe() + " | "
                     + comandos.obterTeclaExibicao("INTERAGIR") + ": pegar granadas  "
                     + comandos.obterTeclaExibicao("LANCAR_GRANADA") + ": lancar");
+                    
             else objetivoHUD.definirTexto("Chefe HP: " + (terceira == null ? "?" : terceira.getVidaChefe())
                  + " | Vença a primeira forma!");
         }
@@ -167,10 +175,12 @@ public class FaseBase extends World {
         estado.adicionarPontos(pontos);
         if (numeroFase == 1 && totalInimigos > 0) {
             derrotados++;
+            
             if (derrotados >= totalInimigos) {
-                if (saida != null && marcaSaida != null) saida.setImage(marcaSaida);
-                avisar("Caminho livre! Va para a direita e pressione "
-                       + comandos.obterTeclaExibicao("INTERAGIR") + ".");
+                if (saida != null && marcaSaida != null) 
+                    saida.setImage(marcaSaida);
+                
+                avisar("Caminho livre! Va para a direita e pressione " + comandos.obterTeclaExibicao("INTERAGIR"));
             } else {
                 avisar("Inimigo derrotado! Restam " + (totalInimigos - derrotados));
             }
@@ -198,7 +208,7 @@ public class FaseBase extends World {
         if (numeroFase == 1) {
             terminou = true;
             estado.adicionarPontos(200);
-            Greenfoot.setWorld(new TelaVitoriaFase(1, comandos, estado, jogador));
+            Greenfoot.setWorld(new TelaVitoriaFase(1, comandos, estado, jogador, "midlife-crisis_transicao.mp3"));
         }
     }
 

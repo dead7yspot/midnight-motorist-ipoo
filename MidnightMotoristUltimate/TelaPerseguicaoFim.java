@@ -1,6 +1,8 @@
 import greenfoot.*;
-
-/** Tela de derrota na rodovia, com opcao de tentar novamente do checkpoint. */
+/** 
+ * Tela de derrota na rodovia, também com opcao de tentar novamente 
+ * 
+ */
 public class TelaPerseguicaoFim extends World {
     private final GerenciadorComandos comandos;
     private final EstadoPartida estado;
@@ -19,8 +21,8 @@ public class TelaPerseguicaoFim extends World {
         imagem.setColor(new Color(5, 10, 17, 190));
         imagem.fillRect(38, 449, 520, 97);
         
-        imagem.drawImage(new GreenfootImage("F1: " + estado.getPontosFase(1) + "   F2: "
-            + estado.getPontosFase(2) + "   F3: " + estado.getPontosFase(3)
+        imagem.drawImage(new GreenfootImage("Fase 1: " + estado.getPontosFase(1) + "   Fase 2: "
+            + estado.getPontosFase(2) + "   Fase 3: " + estado.getPontosFase(3)
             + "   TOTAL: " + estado.getPontos(), 18, Color.WHITE, null), 52, 462);
         
         imagem.drawImage(new GreenfootImage("TEMPO: " + estado.getSegundos()
