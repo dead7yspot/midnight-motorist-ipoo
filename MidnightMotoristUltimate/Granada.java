@@ -44,7 +44,7 @@ public class Granada extends Actor {
             World mundo = getWorld();
         
             // o dano e aplicado uma unica vez
-            tanque.receberGranada();
+            tanque.receberGranada(27);
             
             mundo.addObject(new Explosao(), x, y);
             Greenfoot.playSound("granada.wav");

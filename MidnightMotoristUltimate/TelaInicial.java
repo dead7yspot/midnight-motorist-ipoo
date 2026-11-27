@@ -13,7 +13,7 @@ public class TelaInicial extends World {
     public TelaInicial(GerenciadorComandos comandos) {
         super(1024, 572, 1);
         this.comandos = comandos;
-        GerenciadorAudio.iniciarMusica("Relaxed Scene.mp3");
+        GerenciadorAudio.iniciarMusica("midlife-crisis.mp3");
         criarImagem();
     }
 

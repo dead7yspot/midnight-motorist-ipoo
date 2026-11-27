@@ -18,9 +18,12 @@ public class TanqueChefe extends Inimigo {
         // A blindagem impede que tiros e socos resolvam a segunda etapa.
     }
 
-    /** Unico meio de diminuir a vida da blindagem: granadas coletadas. */
-    public void receberGranada() { 
-        super.receberDano(43); 
+    /** 
+     * Unico meio de diminuir a vida da blindagem é pela explosão das granadas coletadas
+     * O dano é passado por parametro. Padrao durante os testes: 43
+    */
+    public void receberGranada(int dano) { 
+        super.receberDano(dano); 
     }
 
     /** Define a recompensa por derrotar o tanque. */

@@ -46,10 +46,12 @@ public class ArmaFogo extends Armamento {
             Greenfoot.playSound("gun_tiro.wav");
         }
     }
+    
     /** Consulta a municao restante. */
     public int getMunicao() { 
         return municao; 
     }
+    
     /** Consulta quantos projeteis saem em cada disparo. */
     public int getQuantidadeProjetis() { 
         return quantidadeProjetis; 
