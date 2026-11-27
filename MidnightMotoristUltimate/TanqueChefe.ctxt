@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TanqueChefe
+comment0.text=Segunda\ forma\ do\ chefe,\ blindada\ contra\ armas\ comuns.
+comment1.params=jogador
+comment1.target=TanqueChefe(Jogador)
+comment1.text=Prepara\ a\ forma\ blindada,\ suas\ animacoes\ e\ seu\ canhao.
+comment2.params=dano
+comment2.target=void\ receberDano(int)
+comment2.text=Ignora\ os\ danos\ de\ socos\ e\ armas\ comuns\ por\ causa\ da\ blindagem.
+comment3.params=
+comment3.target=void\ receberGranada()
+comment3.text=Unico\ meio\ de\ diminuir\ a\ vida\ da\ blindagem\:\ granadas\ coletadas.
+comment4.params=
+comment4.target=int\ pontosPorMorte()
+comment4.text=Define\ a\ recompensa\ por\ derrotar\ o\ tanque.
+numComments=5

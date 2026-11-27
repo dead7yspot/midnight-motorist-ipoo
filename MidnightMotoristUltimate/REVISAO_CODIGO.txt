@@ -1,0 +1,39 @@
+MIDNIGHT MOTORIST ULTIMATE - REVISAO DE CODIGO
+
+Base consultada: ParteDoRafa.zip e o checklist da entrega final.
+A copia atual mantem as 19 classes Java encontradas no ZIP do Rafa,
+incluindo a estrutura de inventario, Comando e GerenciadorComandos.
+Parte dessas classes ja havia sido bastante adaptada nas versoes
+anteriores; elas nao sao copias identicas do ZIP original.
+
+CORRECOES DESTA REVISAO
+- Comando preserva a posicao da tecla ao remapea-la. O menu destaca entre
+  colchetes qual das teclas alternativas sera alterada.
+- Instrucoes e granada passaram a participar do cadastro de comandos.
+  Assim, nao ficam associadas a mesma tecla que outra acao. A capa, o
+  guia e os avisos exibem as teclas configuradas.
+- A musica pode ser pausada na perseguicao e a preferencia de pausa
+  continua ao trocar de tela. Os efeitos sonoros nao sao desligados.
+- O placar da perseguicao e desenhado desde a criacao do mundo.
+- As sete imagens cinematograficas e os sprites nao foram alterados.
+
+EXEMPLOS PARA ENTENDER A IMPLEMENTACAO
+- Jogador usa um HashMap de equipamentos; GerenciadorComandos usa um
+  HashMap de comandos e cada Comando guarda uma lista de teclas.
+- Personagem concentra vida, movimento e combate para Jogador e Inimigo.
+- Equipamento e Armamento organizam itens e tipos de armas.
+- FaseBase concentra HUD e regras comuns de Fase01 e Fase03; Fase02
+  organiza a perseguicao, que possui regras de movimento diferentes.
+- EstadoPartida guarda os pontos por fase, o total e o inicio da partida.
+- GerenciadorAudio administra o estado estatico da musica.
+
+VERIFICACAO E LIMITES
+- A IDE Greenfoot 3.9.0 compilou o projeto e abriu o menu com Reset/Act.
+- Testes programaticos com a API real verificaram transicoes, placar,
+  recomeço, controles remapeados e varios aspectos do combate. Leia
+  TESTES.txt para os detalhes e limites.
+- Ainda e necessario jogar as tres fases manualmente e escutar os sons.
+- Esta copia contem codigo alterado com auxilio de IA. O enunciado proibe
+  codigo gerado por IA mesmo parcialmente; por isso a revisao tecnica
+  nao torna esta copia compativel com a regra de autoria. O grupo deve
+  consultar o professor sobre como proceder.

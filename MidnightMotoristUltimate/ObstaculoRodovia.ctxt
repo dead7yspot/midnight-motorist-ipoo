@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ObstaculoRodovia
+comment0.text=Carros\ e\ barreiras\ que\ passam\ pela\ rodovia\ e\ devem\ ser\ evitados.
+comment1.params=veiculo
+comment1.target=ObstaculoRodovia(boolean)
+comment1.text=Cria\ um\ carro\ ou\ bloqueio\ com\ imagem\ e\ velocidade\ adequadas.
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Desloca\ o\ obstaculo\ e\ o\ remove\ quando\ sai\ da\ tela.
+numComments=3

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=FaixaRodovia
+comment0.text=Marca\ decorativa\ que\ se\ move\ com\ o\ asfalto,\ sem\ causar\ colisoes.
+comment1.params=
+comment1.target=FaixaRodovia()
+comment1.text=Desenha\ um\ trecho\ da\ marca\ divisoria\ da\ rodovia.
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Move\ a\ marca\ junto\ com\ a\ estrada\ e\ a\ remove\ ao\ sair\ da\ tela.
+numComments=3

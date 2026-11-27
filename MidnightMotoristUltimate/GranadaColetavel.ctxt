@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=GranadaColetavel
+comment0.text=Item\ fisico\ que\ precisa\ ser\ coletado\ antes\ de\ poder\ lancar\ granadas.
+comment1.params=quantidade
+comment1.target=GranadaColetavel(int)
+comment1.text=Prepara\ uma\ coleta\ com\ a\ quantidade\ indicada\ de\ granadas.
+comment2.params=
+comment2.target=int\ getQuantidade()
+comment2.text=Consulta\ quantas\ granadas\ esta\ coleta\ fornece.
+numComments=3

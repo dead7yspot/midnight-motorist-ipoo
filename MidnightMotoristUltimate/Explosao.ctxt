@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Explosao
+comment0.text=Efeito\ de\ explosao,\ sem\ causar\ dano\ repetido.
+comment1.params=
+comment1.target=Explosao()
+comment1.text=Inicia\ o\ efeito\ visual\ em\ tamanho\ pequeno.
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Expande\ a\ explosao\ por\ alguns\ ciclos\ e\ depois\ a\ remove.
+comment3.params=raio
+comment3.target=void\ desenhar(int)
+comment3.text=Desenha\ os\ circulos\ coloridos\ do\ efeito.
+numComments=4

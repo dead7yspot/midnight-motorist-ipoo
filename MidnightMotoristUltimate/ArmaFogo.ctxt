@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=ArmaFogo
+comment0.text=Armamento\ do\ alvo_meu\:\ usa\ municao\ alem\ da\ resistencia.
+comment1.params=nome\ descricao\ imagem\ resistencia\ alcance\ capacidadeMunicao\ danoMaximo
+comment1.target=ArmaFogo(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ int)
+comment2.params=nome\ descricao\ imagem\ resistencia\ alcance\ capacidadeMunicao\ danoMinimo\ danoMaximo\ quantidadeProjetis
+comment2.target=ArmaFogo(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ int,\ int,\ int)
+comment3.params=
+comment3.target=int\ usar()
+comment4.params=
+comment4.target=boolean\ temMunicao()
+comment4.text=Informa\ se\ ainda\ ha\ tiros\ disponiveis.
+comment5.params=
+comment5.target=boolean\ podeUsar()
+comment5.text=Exige\ tanto\ resistencia\ quanto\ municao\ para\ disparar.
+comment6.params=
+comment6.target=void\ gastarMunicao()
+comment6.text=Consome\ um\ tiro\ e\ reproduz\ o\ efeito\ sonoro.
+comment7.params=
+comment7.target=int\ getMunicao()
+comment7.text=Consulta\ a\ municao\ restante.
+comment8.params=
+comment8.target=int\ getQuantidadeProjetis()
+comment8.text=Consulta\ quantos\ projeteis\ saem\ em\ cada\ disparo.
+numComments=9

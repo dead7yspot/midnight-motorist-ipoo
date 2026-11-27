@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=PlacaSaidaRodovia
+comment0.text=Placa\ decorativa\ que\ anuncia\ a\ saida\ antes\ do\ fim\ da\ perseguicao.
+comment1.params=
+comment1.target=PlacaSaidaRodovia()
+comment1.text=Carrega\ a\ placa\ que\ anuncia\ o\ fim\ da\ rodovia.
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Move\ a\ placa\ para\ fora\ da\ tela\ conforme\ a\ estrada\ avanca.
+numComments=3

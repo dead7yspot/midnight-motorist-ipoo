@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BarraVida
+comment0.text=Indicador\ visual\ compacto;\ a\ vida\ permanece\ no\ Jogador.
+comment1.params=vidaMaxima
+comment1.target=BarraVida(int)
+comment1.text=Cria\ a\ barra\ com\ o\ limite\ de\ vida\ do\ jogador.
+comment2.params=vida
+comment2.target=void\ atualizar(int)
+comment2.text=Redesenha\ a\ barra\ somente\ quando\ a\ vida\ muda.
+numComments=3

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Dinheiro
+comment0.text=Dinheiro\ opcional\:\ cria\ caminhos\ com\ pontuacoes\ finais\ diferentes.
+comment1.params=valor
+comment1.target=Dinheiro(int)
+comment1.text=Cria\ uma\ coleta\ de\ dinheiro\ com\ o\ valor\ informado.
+comment2.params=
+comment2.target=int\ getValor()
+comment2.text=Consulta\ os\ pontos\ concedidos\ pela\ coleta.
+numComments=3

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ArmaBranca
+comment0.text=Arma\ branca\ do\ sistema\ de\ armamentos\ do\ alvo_meu.
+comment1.params=nome\ descricao\ imagem\ resistencia\ alcance\ danoMaximo
+comment1.target=ArmaBranca(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int)
+comment1.text=Configura\ uma\ arma\ de\ ataque\ a\ curta\ distancia.
+numComments=2

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=LuzesCidade
+comment0.text=Animacao\ discreta\ de\ letreiros,\ reflexos\ e\ luzes\ em\ cada\ cenario.
+comment1.params=fase
+comment1.target=LuzesCidade(int)
+comment1.text=Prepara\ dois\ quadros\ transparentes\ sem\ criar\ obstaculos\ no\ mapa.
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Alterna\ as\ luzes\ periodicamente\ enquanto\ a\ fase\ esta\ em\ andamento.
+comment3.params=fase\ forte
+comment3.target=greenfoot.GreenfootImage\ criarQuadro(int,\ boolean)
+comment3.text=Desenha\ apenas\ pequenos\ detalhes,\ deixando\ os\ atores\ e\ o\ HUD\ livres.
+numComments=4

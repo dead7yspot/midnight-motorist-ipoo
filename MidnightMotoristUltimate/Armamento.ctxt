@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Armamento
+comment0.text=\r\n\ Equipamento\ q\ causa\ dano;\ resistencia\ \=\ quantos\ usos\ ate\ ficar\ inutilizavel\r\n\ \r\n
+comment1.params=nome\ descricao\ imagem\ resistencia\ alcance\ danoMaximo
+comment1.target=Armamento(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int)
+comment1.text=Guarda\ o\ alcance,\ o\ dano\ e\ a\ quantidade\ de\ usos\ da\ arma.
+comment2.params=
+comment2.target=boolean\ podeUsar()
+comment2.text=Verifica\ se\ a\ arma\ ainda\ possui\ resistencia.
+comment3.params=
+comment3.target=int\ usar()
+comment4.params=
+comment4.target=int\ getResistencia()
+comment4.text=Consulta\ os\ usos\ restantes\ da\ arma.
+comment5.params=
+comment5.target=int\ getAlcance()
+comment5.text=Consulta\ a\ distancia\ maxima\ do\ ataque.
+numComments=6

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Fase01
+comment0.text=Primeira\ fase\:\ limpar\ a\ rua\ e\ encontrar\ a\ saida.
+comment1.params=
+comment1.target=Fase01()
+comment1.text=Permite\ iniciar\ a\ primeira\ fase\ diretamente\ pelo\ Greenfoot.
+comment2.params=comandos\ estado
+comment2.target=Fase01(GerenciadorComandos,\ EstadoPartida)
+comment2.text=Cria\ a\ primeira\ fase\ usando\ os\ comandos\ e\ o\ placar\ da\ partida.
+comment3.params=largura\ altura\ escala\ comandos
+comment3.target=Fase01(int,\ int,\ int,\ GerenciadorComandos)
+comment3.text=Mantem\ a\ assinatura\ da\ versao\ antiga\ para\ facilitar\ uso\ no\ Greenfoot.
+comment4.params=anterior
+comment4.target=void\ prepararCenario(Jogador)
+comment4.text=Distribui\ inimigos,\ itens,\ obstaculos\ e\ a\ saida\ pela\ rua.
+numComments=5

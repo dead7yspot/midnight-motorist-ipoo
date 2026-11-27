@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Placar
+comment0.text=Apresentacao\ compacta\ dos\ pontos\ durante\ a\ partida.
+comment1.params=
+comment1.target=Placar()
+comment1.text=Comeca\ a\ exibicao\ do\ placar\ em\ zero.
+comment2.params=valor
+comment2.target=void\ adicionarPontos(int)
+comment2.text=Acrescenta\ pontos\ ao\ numero\ exibido.
+comment3.params=valor
+comment3.target=void\ definirPontos(int)
+comment3.text=Atualiza\ o\ texto\ quando\ o\ total\ muda.
+comment4.params=
+comment4.target=int\ getPontos()
+comment4.text=Consulta\ o\ total\ atualmente\ exibido.
+numComments=5

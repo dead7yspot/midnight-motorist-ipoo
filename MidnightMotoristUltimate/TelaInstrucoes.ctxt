@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=TelaInstrucoes
+comment0.text=Mundo\ de\ instrucoes\ separado\ do\ menu\ inicial.
+comment1.params=comandos
+comment1.target=TelaInstrucoes(GerenciadorComandos)
+comment1.text=Prepara\ o\ guia\ completo\ preservando\ os\ comandos\ da\ partida.
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Permite\ iniciar\ o\ jogo\ ou\ voltar\ ao\ menu.
+numComments=3

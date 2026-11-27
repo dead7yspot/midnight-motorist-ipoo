@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TelaVitoria
+comment0.text=Tela\ de\ vitoria\ separada,\ acessada\ ao\ vencer\ o\ chefe.
+comment1.params=comandos\ estado
+comment1.target=TelaVitoria(GerenciadorComandos,\ EstadoPartida)
+comment1.text=Encaminha\ a\ vitoria\ e\ o\ placar\ para\ a\ tela\ final.
+numComments=2

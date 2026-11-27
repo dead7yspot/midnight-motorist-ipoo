@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TelaGameOver
+comment0.text=Tela\ de\ derrota\ separada\ para\ facilitar\ manutencao.
+comment1.params=comandos\ estado
+comment1.target=TelaGameOver(GerenciadorComandos,\ EstadoPartida)
+comment1.text=Encaminha\ a\ derrota\ e\ o\ placar\ para\ a\ tela\ final.
+numComments=2

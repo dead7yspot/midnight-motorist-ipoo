@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=MenuConfiguracoes
+comment0.text=Menu\ de\ remapeamento\ original\ do\ alvo_meu,\ adaptado\ ao\ tamanho\ do\ jogo.
+comment1.params=comandos
+comment1.target=MenuConfiguracoes(GerenciadorComandos)
+comment1.text=Abre\ o\ menu\ com\ a\ lista\ ordenada\ dos\ comandos\ configuraveis.
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Navega\ pela\ lista\ e\ valida\ a\ nova\ tecla\ escolhida\ pelo\ jogador.
+comment3.params=
+comment3.target=void\ desenhar()
+comment3.text=Redesenha\ as\ opcoes,\ a\ selecao\ e\ a\ mensagem\ de\ retorno.
+comment4.params=nome\ selecionado
+comment4.target=java.lang.String\ formatarTeclas(java.lang.String,\ boolean)
+comment4.text=Destaca\ a\ tecla\ que\ sera\ alterada\ ao\ pressionar\ Enter.
+comment5.params=texto\ tamanho\ cor\ x\ y
+comment5.target=void\ texto(java.lang.String,\ int,\ greenfoot.Color,\ int,\ int)
+comment5.text=Escreve\ uma\ linha\ na\ imagem\ do\ menu.
+numComments=6

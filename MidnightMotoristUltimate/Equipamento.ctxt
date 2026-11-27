@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Equipamento
+comment0.text=Item\ coletavel\:\ identidade,\ descricao\ e\ representacao\ visual.
+comment1.params=nome\ descricao\ imagem
+comment1.target=Equipamento(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=Guarda\ os\ dados\ do\ item\ e\ carrega\ sua\ imagem.
+comment2.params=
+comment2.target=void\ carregarImagem()
+comment2.text=Aplica\ ao\ ator\ a\ imagem\ indicada\ no\ cadastro.
+comment3.params=
+comment3.target=java.lang.String\ getNome()
+comment3.text=Consulta\ o\ nome\ do\ equipamento.
+comment4.params=
+comment4.target=java.lang.String\ getDescricao()
+comment4.text=Consulta\ a\ descricao\ do\ equipamento.
+comment5.params=
+comment5.target=java.lang.String\ getImagem()
+comment5.text=Consulta\ o\ nome\ do\ arquivo\ de\ imagem\ do\ equipamento.
+numComments=6

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=InimigoHumano
+comment0.text=Inimigo\ humano\ que\ segue\ o\ comportamento\ de\ perseguicao\ de\ Inimigo.
+comment1.params=gangue\ vida\ velocidade\ jogador\ distanciaParada\ arma\ parado\ corridaA\ corridaB\ ataque
+comment1.target=InimigoHumano(java.lang.String,\ int,\ int,\ Jogador,\ int,\ Armamento,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=Cria\ um\ capanga\ com\ a\ arma\ e\ as\ poses\ informadas\ pela\ fase.
+comment2.params=gangue\ vida\ velocidade\ jogador\ distanciaParada\ arma\ parado\ corridaA\ corridaB\ ataque\ corridaCompleta
+comment2.target=InimigoHumano(java.lang.String,\ int,\ int,\ Jogador,\ int,\ Armamento,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String[])
+comment2.text=Permite\ informar\ mais\ quadros\ sem\ mudar\ o\ construtor\ original\ do\ capanga.
+numComments=3

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CarroJogador
+comment0.text=Carro\ controlado\ pelas\ mesmas\ teclas\ configuraveis\ do\ personagem.
+comment1.params=comandos
+comment1.target=CarroJogador(GerenciadorComandos)
+comment1.text=Prepara\ o\ carro\ e\ reaproveita\ as\ teclas\ configuradas.
+comment2.params=nome
+comment2.target=boolean\ pressionado(java.lang.String)
+comment2.text=Verifica\ se\ alguma\ tecla\ do\ comando\ esta\ pressionada.
+comment3.params=
+comment3.target=void\ act()
+comment3.text=Move\ o\ carro\ na\ pista\ e\ comunica\ colisoes\ a\ fase.
+numComments=4

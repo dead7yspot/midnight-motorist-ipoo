@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=TelaVitoriaFase
+comment0.text=Tela\ exclusiva\ de\ missao\ concluida,\ com\ arte\ que\ mostra\ o\ protagonista\ vitorioso.
+comment1.params=numero\ comandos\ estado\ jogador
+comment1.target=TelaVitoriaFase(int,\ GerenciadorComandos,\ EstadoPartida,\ Jogador)
+comment1.text=Apresenta\ a\ vitoria\ da\ fase\ e\ guarda\ o\ jogador\ para\ a\ proxima.
+comment2.params=
+comment2.target=void\ escreverPlacar()
+comment2.text=Mostra\ pontos,\ tempo\ e\ instrucoes\ para\ continuar.
+comment3.params=
+comment3.target=void\ act()
+comment3.text=Aguarda\ o\ jogador\ continuar\ para\ a\ fase\ seguinte\ ou\ voltar\ ao\ menu.
+numComments=4

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ItemEmpunhado
+comment0.text=Elemento\ visual,\ nao\ coletavel,\ que\ acompanha\ o\ equipamento\ na\ mao.
+comment1.params=
+comment1.target=ItemEmpunhado()
+comment1.text=Comeca\ com\ uma\ imagem\ transparente\ ate\ receber\ um\ equipamento.
+comment2.params=arquivo
+comment2.target=void\ mostrar(java.lang.String)
+comment2.text=Carrega\ e\ ajusta\ a\ imagem\ do\ equipamento\ escolhido.
+comment3.params=direita
+comment3.target=void\ atualizarDirecao(boolean)
+comment3.text=Atualiza\ o\ lado\ para\ o\ qual\ o\ equipamento\ deve\ apontar.
+comment4.params=
+comment4.target=void\ atualizarImagem()
+comment4.text=Aplica\ uma\ copia\ espelhada\ quando\ o\ personagem\ olha\ a\ esquerda.
+numComments=5

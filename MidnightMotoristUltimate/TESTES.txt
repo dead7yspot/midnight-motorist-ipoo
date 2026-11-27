@@ -1,0 +1,59 @@
+MIDNIGHT MOTORIST ULTIMATE - VERIFICACOES
+
+Ambiente: Greenfoot 3.9.0 instalado, JDK 21 da propria instalacao.
+
+Executado nesta revisao:
+- Compilacao dos arquivos Java do jogo com javac e a API real do Greenfoot:
+  passou. O compilador em linha de comando emitiu avisos sobre anotacoes
+  threadchecker.Tag, sem erros de compilacao.
+- O projeto foi aberto e compilado pela IDE Greenfoot 3.9.0; Reset
+  instanciou o mundo inicial e foi solicitado um ciclo Act no menu.
+- Teste de integracao programatico com as classes reais do Greenfoot:
+  passou. O teste inicializa a API com adaptadores locais de recursos;
+  nao substitui as classes Greenfoot por stubs.
+- A versao com os sprites do pacote foi recompilada e o teste de integracao
+  foi repetido: corrida alternando quatro quadros e ataque com pose de faca.
+- Revisao cinematografica: verificadas a imagem correta para cada resultado,
+  a exibicao dos pontos reais e a tecla de coleta da capa, inclusive depois
+  de remapeada. Os numeros fixos das imagens nao sao usados como placar.
+- Revisao dos cenarios: personagens humanos 35% maiores, alinhamento dos pes
+  e colisao com obstaculos conferidos; tanque com tamanho preservado.
+- A porta da fase 1 foi removida. O teste verificou a saida bloqueada antes
+  dos abates, a seta no chao apos vencer e a passagem com E.
+- Luzes animadas aparecem nas tres fases; os carros da rodovia variam de cor
+  sem alterar a frequencia de surgimento. Capturas das fases foram revisadas.
+- Fase 1: quatro inimigos, vitoria e transicao para a perseguicao.
+- Fase 2: colisao real com obstaculo aproxima a viatura; sobrevivencia
+  abre a vitoria; colisoes repetidas abrem a derrota; R refaz a fase
+  preservando a pontuacao anterior.
+- Fase 3: shotgun cria tres projeteis; na metade da vida o chefe entra
+  no tanque; armas comuns nao tiram vida do tanque; E coleta granadas,
+  G lanca e consome uma granada, e o impacto reduz a vida do tanque.
+- Dano: 500 amostras da shotgun ficaram entre 16 e 24; 500 amostras
+  do canhao ficaram entre 32 e 40. O canhao causa mais dano por acerto.
+- Resultado final: derrotar o tanque abre a vitoria; pontuacao fica
+  separada por fase; R recomeca sem usar o botao Run. Mortes nas fases
+  1 e 3 abrem telas de derrota.
+- Auditoria de comandos: verificados conflitos, preservacao da ordem das
+  teclas, escolha da alternativa no menu e remapeamento real de coleta,
+  instrucoes, granada e musica. O HUD da fase final acompanha a configuracao.
+- A persecucao exibe o placar desde o primeiro quadro e a musica pode ser
+  pausada nela; a preferencia de pausa foi verificada ao trocar de tela.
+- Em testes programaticos com a API real, golpes de faca atingiram e derrotaram
+  um inimigo, um projetil de shotgun atingiu o jogador e quatro granadas
+  lancadas atingiram o tanque, abrindo a vitoria final.
+- Conferidos os exemplos de heranca, colecoes com uso real, comentarios dos
+  metodos e a ausencia de lambdas e streams nos arquivos Java do projeto.
+- Foram geradas e inspecionadas as sete composicoes de tela refeitas e imagens
+  renderizadas do menu e do HUD nas tres fases.
+
+Limites desta verificacao:
+- Nao foi realizada uma partida manual completa dentro da IDE Greenfoot.
+  Antes da entrega, abra project.greenfoot no Greenfoot 3.9.0, clique
+  em Compilar e jogue as tres fases, inclusive testando som, balanceamento,
+  colisao e controles num computador do laboratorio.
+- Os testes nao comprovam conformidade com a regra de autoria: esta copia
+  contem codigo alterado com auxilio de IA, o que o enunciado proibe.
+- O teste de integracao esta em ferramentas/TesteIntegracao.java e usa
+  classes internas da instalacao Greenfoot apenas para verificacao local;
+  ele nao e necessario para executar o jogo.

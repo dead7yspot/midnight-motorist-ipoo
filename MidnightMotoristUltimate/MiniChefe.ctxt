@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MiniChefe
+comment0.text=Minichefe\ da\ unica\ fase\ exigida\ na\ primeira\ entrega.
+comment1.params=jogador
+comment1.target=MiniChefe(Jogador)
+comment1.text=Prepara\ o\ inimigo\ de\ elite\ e\ sua\ arma\ de\ fogo.
+comment2.params=
+comment2.target=int\ pontosPorMorte()
+comment2.text=Define\ a\ recompensa\ por\ derrotar\ o\ minichefe.
+numComments=3

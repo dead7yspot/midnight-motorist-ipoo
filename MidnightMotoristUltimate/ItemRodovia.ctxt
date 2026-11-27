@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ItemRodovia
+comment0.text=Superclasse\ dos\ itens\ da\ perseguicao,\ coletados\ pelo\ carro.
+comment1.params=imagem
+comment1.target=ItemRodovia(java.lang.String)
+comment1.text=Carrega\ e\ dimensiona\ a\ imagem\ compartilhada\ pelos\ itens\ da\ pista.
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Desloca\ o\ item\ e\ aplica\ seu\ efeito\ quando\ o\ carro\ o\ coleta.
+comment3.params=fase
+comment3.target=void\ aplicar(Fase02)
+comment3.text=Cada\ tipo\ de\ item\ define\ seu\ proprio\ efeito\ na\ perseguicao.
+numComments=4

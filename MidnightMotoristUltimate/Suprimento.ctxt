@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Suprimento
+comment0.text=Suprimento\ coletavel\ que\ recupera\ a\ vida\ quando\ usado.
+comment1.params=nome\ cura
+comment1.target=Suprimento(java.lang.String,\ int)
+comment1.text=Cria\ um\ kit\ com\ a\ quantidade\ de\ vida\ que\ ele\ recupera.
+comment2.params=
+comment2.target=int\ getCura()
+comment2.text=Consulta\ a\ quantidade\ de\ vida\ recuperada.
+numComments=3

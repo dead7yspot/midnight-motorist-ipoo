@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ArteTelas
+comment0.text=Carrega\ as\ sete\ artes\ de\ tela\ enviadas\ pelo\ grupo.
+comment1.params=
+comment1.target=greenfoot.GreenfootImage\ criarInicio()
+comment2.params=fase\ vitoria
+comment2.target=greenfoot.GreenfootImage\ criarResultado(int,\ boolean)
+comment3.params=arquivo
+comment3.target=greenfoot.GreenfootImage\ carregar(java.lang.String)
+comment4.params=fundo\ frase\ tamanho\ cor\ x\ y
+comment4.target=void\ texto(greenfoot.GreenfootImage,\ java.lang.String,\ int,\ greenfoot.Color,\ int,\ int)
+numComments=5

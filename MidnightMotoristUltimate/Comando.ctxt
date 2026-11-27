@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Comando
+comment0.text=Representa\ um\ comando\ e\ guarda\ suas\ teclas,\ apelido\ e\ categoria.
+comment1.params=alias\ categoria\ teclaInicial
+comment1.target=Comando(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=Cria\ o\ comando\ com\ seu\ nome\ de\ exibicao,\ categoria\ e\ primeira\ tecla.
+comment2.params=
+comment2.target=java.lang.String\ getAlias()
+comment2.text=Consulta\ o\ nome\ apresentado\ ao\ jogador.
+comment3.params=
+comment3.target=java.lang.String\ getCategoria()
+comment3.text=Consulta\ o\ grupo\ ao\ qual\ o\ comando\ pertence.
+comment4.params=
+comment4.target=java.util.ArrayList\ getTeclas()
+comment4.text=Devolve\ uma\ copia\ das\ teclas\ para\ proteger\ a\ lista\ original.
+comment5.params=tecla
+comment5.target=boolean\ adicionarTecla(java.lang.String)
+comment5.text=Acrescenta\ uma\ tecla\ valida\ que\ ainda\ nao\ esta\ neste\ comando.
+comment6.params=tecla
+comment6.target=boolean\ removerTecla(java.lang.String)
+comment6.text=Remove\ do\ comando\ a\ tecla\ informada,\ se\ ela\ existir.
+comment7.params=teclaAntiga\ teclaNova
+comment7.target=boolean\ reBind(java.lang.String,\ java.lang.String)
+numComments=8

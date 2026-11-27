@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=TelaFim
+comment0.text=Superclasse\ das\ telas\ finais\:\ placar\ por\ fase,\ tempo,\ reinicio\ e\ menu.
+comment1.params=comandos\ estado\ vitoria
+comment1.target=TelaFim(GerenciadorComandos,\ EstadoPartida,\ boolean)
+comment1.text=Abre\ o\ resultado\ final\ com\ o\ placar\ da\ partida\ atual.
+comment2.params=comandos\ vitoria
+comment2.target=TelaFim(GerenciadorComandos,\ boolean)
+comment2.text=Mantem\ a\ construcao\ alternativa\ com\ um\ placar\ novo.
+comment3.params=
+comment3.target=void\ prepararTela()
+comment3.text=Monta\ a\ arte\ correta\ e\ escreve\ pontos,\ tempo\ e\ opcoes.
+comment4.params=texto\ tamanho\ x\ y
+comment4.target=void\ desenhar(java.lang.String,\ int,\ int,\ int)
+comment4.text=Desenha\ uma\ linha\ de\ texto\ sobre\ o\ resultado.
+comment5.params=
+comment5.target=void\ act()
+comment5.text=Permite\ recomecar\ ou\ voltar\ ao\ menu\ sem\ usar\ o\ botao\ Run.
+numComments=6

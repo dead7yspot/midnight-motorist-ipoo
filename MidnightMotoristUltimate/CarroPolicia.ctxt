@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CarroPolicia
+comment0.text=O\ carro\ policial\ acompanha\ a\ faixa\ do\ jogador.
+comment1.params=
+comment1.target=CarroPolicia()
+comment1.text=Carrega\ as\ duas\ imagens\ alternadas\ da\ sirene.
+comment2.params=arquivo
+comment2.target=greenfoot.GreenfootImage\ criarImagem(java.lang.String)
+comment2.text=Carrega\ e\ ajusta\ ao\ mesmo\ tamanho\ uma\ imagem\ da\ viatura.
+comment3.params=
+comment3.target=void\ act()
+comment3.text=Pisca\ a\ sirene\ e\ acompanha\ a\ faixa\ e\ a\ distancia\ do\ jogador.
+numComments=4

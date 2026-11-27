@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Projetil
+comment0.text=Projetil\ do\ alvo_meu\:\ ignora\ o\ autor,\ nao\ atravessa\ obstaculos\ e\ nao\ atinge\ aliados.
+comment1.params=direcao\ velocidade\ dano\ alcance\ atirador
+comment1.target=Projetil(int,\ int,\ int,\ int,\ Personagem)
+comment1.text=Cria\ um\ disparo\ comum\ que\ segue\ em\ linha\ reta.
+comment2.params=direcao\ velocidade\ dano\ alcance\ atirador\ desvioVertical
+comment2.target=Projetil(int,\ int,\ int,\ int,\ Personagem,\ int)
+comment2.text=Um\ desvio\ pequeno\ separa\ os\ tres\ bagos\ da\ espingarda\ durante\ o\ voo.
+comment3.params=
+comment3.target=void\ act()
+comment3.text=Avanca\ o\ projetil\ e\ trata\ impactos,\ obstaculos\ e\ fim\ do\ alcance.
+comment4.params=
+comment4.target=Personagem\ procurarAlvo()
+comment4.text=Procura\ um\ alvo\ valido,\ sem\ atingir\ o\ autor\ nem\ seus\ aliados.
+numComments=5

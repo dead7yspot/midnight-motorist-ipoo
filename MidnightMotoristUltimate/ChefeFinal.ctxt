@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ChefeFinal
+comment0.text=Primeira\ forma\ do\ chefe.\ Na\ metade\ da\ vida,\ ele\ troca\ para\ o\ tanque.
+comment1.params=jogador
+comment1.target=ChefeFinal(Jogador)
+comment1.text=Prepara\ o\ chefao\ humano\ com\ sua\ shotgun\ de\ tres\ projeteis.
+comment2.params=dano
+comment2.target=void\ receberDano(int)
+comment2.text=Troca\ para\ o\ tanque\ quando\ o\ proximo\ dano\ alcancaria\ metade\ da\ vida.
+comment3.params=
+comment3.target=int\ pontosPorMorte()
+comment3.text=Define\ a\ recompensa\ associada\ a\ esta\ forma\ do\ chefao.
+numComments=4

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Cenario
+comment0.text=\r\n\ Objeto\ do\ ambiente.\ O\ proprio\ cenario\ define\ se\ bloqueia\ a\ passagem,\r\n\ o\ tamanho\ da\ area\ de\ colisao\ e\ se\ pode\ ser\ usado\ como\ saida.\r\n\ As\ imagens\ nao\ determinam\ a\ colisao\:\ somente\ a\ base\ do\ objeto\ o\ faz.\r\n
+comment1.params=nome\ id\ interativo\ imagem
+comment1.target=Cenario(java.lang.String,\ int,\ boolean,\ java.lang.String)
+comment1.text=Cria\ um\ objeto\ de\ cenario\ com\ dimensoes\ padrao.
+comment2.params=nome\ id\ interativo\ bloqueia\ imagem\ larguraImagem\ alturaImagem\ meiaLargura\ meiaAltura\ deslocamentoY
+comment2.target=Cenario(java.lang.String,\ int,\ boolean,\ boolean,\ java.lang.String,\ int,\ int,\ int,\ int,\ int)
+comment2.text=Configura\ imagem,\ interacao\ e\ caixa\ de\ colisao\ do\ objeto.
+comment3.params=x\ y\ raioX\ raioY
+comment3.target=boolean\ bloqueiaPosicao(int,\ int,\ int,\ int)
+comment3.text=Testa\ caixas\ de\ colisao\ pequenas,\ independentes\ da\ transparencia\ do\ sprite.
+comment4.params=
+comment4.target=java.lang.String\ getNome()
+comment4.text=Consulta\ o\ nome\ do\ objeto\ de\ cenario.
+comment5.params=
+comment5.target=int\ getId()
+comment5.text=Consulta\ o\ identificador\ do\ objeto.
+comment6.params=
+comment6.target=boolean\ acessar()
+comment6.text=Informa\ se\ o\ objeto\ pode\ ser\ acessado.
+numComments=7

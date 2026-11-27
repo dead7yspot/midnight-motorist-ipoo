@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Inimigo
+comment0.text=\r\n\ Inimigo\ de\ perseguicao\ do\ alvo_meu.\ Concentramos\ aqui\ combate\ e\ vida;\r\n\ subclasses\ podem\ substituir\ apenas\ o\ padrao\ de\ movimentacao.\r\n
+comment1.params=nome\ vida\ velocidade\ jogador\ distanciaParada\ arma\ parado\ corridaA\ corridaB\ ataque
+comment1.target=Inimigo(java.lang.String,\ int,\ int,\ Jogador,\ int,\ Armamento,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\ Move\ o\ inimigo,\ atualiza\ sua\ animacao\ e\ tenta\ atacar\ o\ jogador\r\n\r\n
+comment3.params=
+comment3.target=boolean\ moverInimigo()
+comment4.params=
+comment4.target=void\ tentarAtacar()
+comment5.params=
+comment5.target=Jogador\ obterJogador()
+comment6.params=raio
+comment6.target=void\ ajustarRaioVisao(int)
+comment7.params=intervalo
+comment7.target=void\ ajustarIntervaloAtaque(int)
+comment8.params=
+comment8.target=int\ pontosPorMorte()
+comment9.params=
+comment9.target=void\ aoMorrer()
+numComments=10

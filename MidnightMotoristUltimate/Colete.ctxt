@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Colete
+comment0.text=Item\ de\ defesa,\ absorve\ parte\ dos\ proximos\ danos\ ao\ jogador.
+comment1.params=
+comment1.target=Colete()
+comment1.text=Cria\ o\ item\ que\ pode\ absorver\ dano\ do\ jogador.
+numComments=2
